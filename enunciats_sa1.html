@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemes UP1 - Anàlisi de Sistemes Mecànics</title>
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" xintegrity="sha384-n8MVd4RsNIU0KOVEMMZMSchEorqbvhFcuOxgnTryKaVkucguuTMMsPiiCpo1gUWV" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" xintegrity="sha384-XjKyOOlVwcpaNlchBOmLAfUGrXOdGbSMMCQH2W1CsRHBgoLhecGe4hSdcMAy5Nb2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" xintegrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .katex-display {
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 0.5rem 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+
+        <!-- Header -->
+        <header class="bg-[#D4560B] text-white p-6 rounded-xl shadow-lg mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold">Problemes Proposats</h1>
+            <p class="mt-2 text-orange-200">Col·lecció d'exercicis per a la Unitat de Programació 1.</p>
+        </header>
+        
+        <!-- Navigation Buttons -->
+        <div class="mb-8 flex space-x-4">
+            <a href="index.html" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">&larr; Tornar a l'inici</a>
+            <a href="up1_apunts.html" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">Consultar Apunts Teòrics &rarr;</a>
+        </div>
+
+        <main class="bg-white p-6 sm:p-8 rounded-lg shadow-md space-y-10">
+
+            <!-- Secció 1: Força, Treball i Potència Lineal -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Fonaments: Força, Treball i Potència Lineal</h2>
+                <ol class="list-decimal list-outside space-y-6 ml-6">
+                    <li class="pl-2">
+                        Un cotxe de <strong>1200 kg</strong> accelera a raó de <strong>3 m/s²</strong>. Quina força neta està actuant sobre el vehicle?
+                    </li>
+                    <li class="pl-2">
+                        Un operari empeny una caixa amb una força constant de <strong>150 N</strong> al llarg d'una distància de <strong>10 metres</strong> en la mateixa direcció del moviment. Quin treball ha realitzat?
+                    </li>
+                    <li class="pl-2">
+                         Una grua puja un contenidor de <strong>300 kg</strong> amb una acceleració de <strong>0.5 m/s²</strong>. Quina és la tensió que ha de suportar el cable? (Recorda considerar el pes i la força deguda a l'acceleració. Utilitza $g = 9.8 \text{ m/s}^2$).
+                    </li>
+                    <li class="pl-2">
+                        Arrosseguem un carretó aplicant una força de <strong>50 N</strong> amb una corda que forma un angle de <strong>30º</strong> respecte a l'horitzontal. Si el carretó es desplaça <strong>20 metres</strong>, quin treball ha realitzat la força?
+                    </li>
+                    <li class="pl-2">
+                        Un ascensor realitza un treball de <strong>20.000 J</strong> per pujar una càrrega en <strong>5 segons</strong>. Quina és la potència mitjana desenvolupada per l'ascensor?
+                    </li>
+                    <li class="pl-2">
+                        Un vehicle es mou a una velocitat constant de <strong>25 m/s</strong> (90 km/h) i el seu motor ha de vèncer una força de resistència total de <strong>800 N</strong>. Quina potència està desenvolupant el motor?
+                    </li>
+                    <li class="pl-2">
+                         Un cotxe de <strong>1400 kg</strong> puja per una rampa amb un pendent del 5% (això significa que puja 5 metres d'alçada per cada 100 metres de distància recorreguda) a una velocitat constant de <strong>54 km/h</strong>. Si la força de fregament és de <strong>350 N</strong>, quina potència ha de desenvolupar el motor?
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Secció 2: Moviment Rotatori -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Moviment Rotatori: Velocitat Angular i Parell</h2>
+                <ol class="list-decimal list-outside space-y-6 ml-6" start="8">
+                    <li class="pl-2">
+                        Per afluixar un cargol, apliquem una força de <strong>120 N</strong> a l'extrem d'una clau anglesa de <strong>30 cm</strong> de longitud. Quin és el parell motor que estem aplicant? (Recorda passar les unitats al SI).
+                    </li>
+                    <li class="pl-2">
+                        El motor d'un cotxe gira a <strong>3000 rpm</strong>. Expressa aquesta velocitat en radians per segon (rad/s).
+                    </li>
+                    <li class="pl-2">
+                         Les rodes d'una bicicleta tenen un diàmetre de <strong>68 cm</strong>. Si el ciclista es desplaça a <strong>25 km/h</strong>, quina és la velocitat angular de les rodes en rad/s i en rpm?
+                    </li>
+                    <li class="pl-2">
+                        Una roda de <strong>40 cm</strong> de radi gira a una velocitat angular constant de <strong>15 rad/s</strong>. Quina és la velocitat lineal d'un punt situat a la vora de la roda?
+                    </li>
+                    <li class="pl-2">
+                        Un motor elèctric subministra un parell motor constant de <strong>50 N·m</strong> mentre gira a <strong>1500 rpm</strong>. Quina potència desenvolupa el motor?
+                    </li>
+                     <li class="pl-2">
+                        Un trepant aplica un parell de <strong>10 N·m</strong> i gira un total de <strong>50 revolucions</strong> per fer un forat. Quin treball ha realitzat? (Expressa l'angle en radians).
+                    </li>
+                    <li class="pl-2">
+                         Un volant d'inèrcia és accelerat des del repòs fins a <strong>500 rpm</strong> en <strong>8 segons</strong> per un parell motor constant. Si el treball realitzat durant aquest procés va ser de <strong>4000 J</strong>, quin és el valor del parell motor aplicat?
+                    </li>
+                </ol>
+            </section>
+
+             <!-- Secció 3: Energia Mecànica -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Energia Mecànica</h2>
+                <ol class="list-decimal list-outside space-y-6 ml-6" start="15">
+                    <li class="pl-2">
+                        Calcula l'energia cinètica d'un camió de <strong>8000 kg</strong> que es mou a <strong>72 km/h</strong>. (Recorda passar la velocitat a m/s).
+                    </li>
+                    <li class="pl-2">
+                        Un test de <strong>2 kg</strong> es troba a la barana d'un balcó a <strong>15 metres</strong> d'altura respecte al carrer. Quina és la seva energia potencial gravitatòria? (Utilitza $g = 9.8 \text{ m/s}^2$).
+                    </li>
+                    <li class="pl-2">
+                        Un ocell de <strong>0.5 kg</strong> vola a una altura de <strong>50 m</strong> amb una velocitat de <strong>8 m/s</strong>. Quina és la seva energia mecànica total?
+                    </li>
+                    <li class="pl-2">
+                         Una pilota de <strong>1 kg</strong> es deixa caure des d'una altura de <strong>20 m</strong>. Ignorant la fricció amb l'aire, quina serà la seva velocitat just abans de tocar a terra? (Pista: utilitza el principi de conservació de l'energia mecànica).
+                    </li>
+                    <li class="pl-2">
+                        Un ciclista i la seva bicicleta, amb una massa total de <strong>80 kg</strong>, tenen una energia cinètica de <strong>2500 J</strong>. A quina velocitat es desplacen?
+                    </li>
+                     <li class="pl-2">
+                        Un vagó de muntanya russa de <strong>400 kg</strong> es troba al cim d'una pujada de <strong>30 m</strong> d'altura, movent-se a <strong>2 m/s</strong>. Quina serà la seva velocitat quan arribi al punt més baix d'una vallada, situat a <strong>5 m</strong> sobre el nivell de referència? (Considera que no hi ha fregament).
+                    </li>
+                </ol>
+            </section>
+
+             <!-- Secció 4: Rendiment -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Rendiment i Eficiència de les Màquines</h2>
+                <ol class="list-decimal list-outside space-y-6 ml-6" start="21">
+                    <li class="pl-2">
+                        Un motor elèctric consumeix una potència de <strong>1000 W</strong> de la xarxa elèctrica ($P_{subministrada}$) i aconsegueix generar una potència mecànica útil de <strong>850 W</strong> al seu eix ($P_{útil}$). Quin és el seu rendiment?
+                    </li>
+                    <li class="pl-2">
+                        Una bomba d'aigua té un rendiment del <strong>75%</strong>. Si el motor que l'acciona li subministra una potència de <strong>2000 W</strong>, quina és la potència útil que realment s'aprofita per moure l'aigua?
+                    </li>
+                    <li class="pl-2">
+                        Volem una grua que sigui capaç de desenvolupar una potència útil de <strong>5000 W</strong>. Si el seu sistema motor té un rendiment del <strong>80%</strong>, quina potència elèctrica haurà de consumir de la xarxa?
+                    </li>
+                     <li class="pl-2">
+                        Un motor elèctric amb un rendiment del <strong>90%</strong> està connectat a un reductor d'engranatges amb un rendiment del <strong>85%</strong>. Si el motor consumeix <strong>2 kW</strong> de potència elèctrica, quina és la potència mecànica útil final a la sortida del reductor?
+                    </li>
+                    <li class="pl-2">
+                        Una bomba d'aigua necessita aportar <strong>1.2 kW</strong> de potència hidràulica (útil). Si el seu rendiment és del <strong>60%</strong>, quanta energia (en kWh) es perdrà en forma de calor si funciona de manera contínua durant <strong>3 hores</strong>?
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Secció 5: Síntesi -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Problemes de Síntesi</h2>
+                 <ol class="list-decimal list-outside space-y-6 ml-6" start="26">
+                    <li class="pl-2">
+                        Una grua eleva una càrrega de <strong>500 kg</strong> a una altura de <strong>20 metres</strong> en <strong>10 segons</strong> a velocitat constant. Es demana:
+                        <ul class="list-disc list-inside ml-6 mt-2">
+                            <li>El treball realitzat per la grua.</li>
+                            <li>La potència útil desenvolupada.</li>
+                            <li>Si el motor de la grua té un rendiment del <strong>70%</strong>, quina potència ha consumit?</li>
+                        </ul>
+                    </li>
+                    <li class="pl-2">
+                        Un motor elèctric gira a <strong>2500 rpm</strong> i, a través d'un sistema d'engranatges, acciona un torn que té un parell motor a la sortida de <strong>80 N·m</strong>. El rendiment total del sistema és del <strong>85%</strong>. Quina potència útil desenvolupa el torn i quina potència consumeix el motor?
+                    </li>
+                    <li class="pl-2">
+                         Un cabrestant elèctric té un motor que proporciona un parell de <strong>150 N·m</strong> a <strong>120 rpm</strong>, amb un rendiment del <strong>90%</strong>. El tambor del cabrestant on s'enrotlla el cable té un radi de <strong>10 cm</strong>. Es demana:
+                         <ul class="list-disc list-inside ml-6 mt-2">
+                             <li>La potència útil del motor.</li>
+                             <li>La velocitat lineal a la qual s'eleva la càrrega.</li>
+                             <li>El pes màxim (en Newtons i en kg) que pot aixecar a velocitat constant.</li>
+                         </ul>
+                    </li>
+                     <li class="pl-2">
+                        Un cotxe elèctric de <strong>1500 kg</strong> puja per una pendent amb una velocitat constant de <strong>18 m/s</strong>. El sistema motor-transmissió té un rendiment global del <strong>90%</strong>. La força de resistència total (rodament + aire) és de <strong>600 N</strong>. Si en <strong>30 segons</strong> ha pujat una altura de <strong>40 metres</strong>, calcula la potència útil total i la potència elèctrica que ha consumit la bateria durant aquest temps. (Pista: la potència útil ha de vèncer la resistència i guanyar energia potencial).
+                    </li>
+                    <li class="pl-2">
+                         Un ventilador industrial és accionat per un motor de <strong>800 W</strong> amb un rendiment del <strong>85%</strong>. Les pales del ventilador giren a <strong>900 rpm</strong>. Quin és el parell motor a l'eix del ventilador? Si aquest ventilador accelera <strong>15 kg</strong> d'aire per segon des del repòs fins a una velocitat de <strong>10 m/s</strong>, quina és l'eficiència de les pales (és a dir, quin percentatge de la potència de l'eix es converteix en energia cinètica de l'aire)?
+                    </li>
+                </ol>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16 py-4 border-t border-slate-200 text-sm text-slate-500 space-y-2">
+            <p>&copy; 2025 Vicent Cardona. Departament de Tecnologia. IES Quartó de Portmany</p>
+            <p>Aquesta obra està subjecta a una llicència de Creative Commons
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-blue-600 hover:underline">CC BY-NC-SA 4.0</a>
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // Script to render LaTeX formulas using KaTeX
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
+

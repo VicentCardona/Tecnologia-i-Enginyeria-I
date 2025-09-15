@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apunts UP1 - Fonaments Físics de l'Enginyeria</title>
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" xintegrity="sha384-n8MVd4RsNIU0KOVEMMZMSchEorqbvhFcuOxgnTryKaVkucguuTMMsPiiCpo1gUWV" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" xintegrity="sha384-XjKyOOlVwcpaNlchBOmLAfUGrXOdGbSMMCQH2W1CsRHBgoLhecGe4hSdcMAy5Nb2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" xintegrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .katex-display {
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 0.5rem 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+
+        <!-- Header -->
+        <header class="bg-[#2156A0] text-white p-6 rounded-xl shadow-lg mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold">UP 1: Anàlisi de Sistemes Mecànics</h1>
+            <p class="mt-2 text-blue-200">Fonaments físics per al càlcul i anàlisi de màquines i mecanismes.</p>
+        </header>
+        
+        <!-- Back Button -->
+        <div class="mb-8">
+            <a href="index.html" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">&larr; Tornar a l'inici</a>
+        </div>
+
+        <main class="bg-white p-6 sm:p-8 rounded-lg shadow-md space-y-10">
+
+            <!-- Magnituds Fonamentals -->
+            <section id="magnituds-fonamentals">
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">1. Magnituds Fonamentals del Moviment</h2>
+                
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-[#2156A0]">Força ($F$)</h3>
+                    <p>En física, una <strong class="font-semibold">força</strong> és una interacció que, si actua sola sobre un cos, li provoca una acceleració. És a dir, una força pot canviar l'estat de moviment d'un objecte (la seva velocitat o direcció). La relació fonamental entre força, massa i acceleració ve donada per la Segona Llei de Newton.</p>
+                    
+                    <div class="bg-slate-100 p-4 rounded-lg">
+                        <p class="font-semibold">Segona Llei de Newton:</p>
+                        $$ F = m \cdot a $$
+                        <p class="text-sm text-slate-600 mt-2">On $F$ és la força neta (en Newtons, N), $m$ és la massa del cos (en kg) i $a$ és la seva acceleració (en m/s²).</p>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-[#2156A0]">Treball ($W$)</h3>
+                    <p>El <strong class="font-semibold">treball</strong> és l'energia que es transfereix a un objecte quan una força actua sobre ell al llarg d'un desplaçament. Només la component de la força que actua en la direcció del moviment realitza treball.</p>
+
+                    <div class="bg-slate-100 p-4 rounded-lg">
+                        <p class="font-semibold">Definició de Treball:</p>
+                        $$ W = F \cdot d \cdot \cos(\alpha) $$
+                        <p class="text-sm text-slate-600 mt-2">On $W$ és el treball (en Joules, J), $F$ és la força (N), $d$ és el desplaçament (m) i $\alpha$ és l'angle entre la força i el desplaçament. Si la força i el desplaçament tenen la mateixa direcció, $\alpha = 0$ i la fórmula se simplifica a $W = F \cdot d$.</p>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-[#2156A0]">Potència ($P$)</h3>
+                    <p>La <strong class="font-semibold">potència</strong> és una mesura de la rapidesa amb què es realitza un treball o es transfereix energia. Una màquina molt potent és capaç de fer molt treball en poc temps.</p>
+
+                    <div class="bg-slate-100 p-4 rounded-lg space-y-4">
+                        <div>
+                            <p class="font-semibold">Definició General de Potència:</p>
+                            $$ P = \frac{W}{t} $$
+                            <p class="text-sm text-slate-600 mt-2">On $P$ és la potència (en Watts, W), $W$ és el treball (J) i $t$ és el temps (s). Un Watt equival a un Joule per segon (1 W = 1 J/s).</p>
+                        </div>
+                        <div>
+                             <p class="font-semibold">Potència en Moviment Lineal:</p>
+                            <p>Podem expressar la potència en funció de la força i la velocitat. Sabent que $W = F \cdot d$ i $v = d/t$:</p>
+                            $$ P = \frac{F \cdot d}{t} = F \cdot \left(\frac{d}{t}\right) \implies P = F \cdot v $$
+                             <p class="text-sm text-slate-600 mt-2">Aquesta fórmula és molt útil per calcular la potència instantània d'un motor que mou un objecte a una certa velocitat.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Moviment Rotatori -->
+            <section id="moviment-rotatori">
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6 mt-12">2. El Món del Gir: Moviment Rotatori</h2>
+                <p class="mb-6">En enginyeria, el moviment de rotació és tan important com el lineal. La majoria de màquines (motors, turbines, rodes) basen el seu funcionament en el gir. Per descriure aquest moviment, necessitem magnituds anàlogues a les del moviment lineal, començant per la velocitat.</p>
+                
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-[#2156A0]">Velocitat Lineal vs. Velocitat Angular</h3>
+                    <p>Quan un objecte rígid gira, com una roda, tots els seus punts es mouen. No obstant això, no tots ho fan de la mateixa manera. Hem de diferenciar entre dos tipus de velocitat:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-slate-100 p-4 rounded-lg">
+                            <p><strong class="font-semibold">Velocitat Lineal ($v$):</strong> És la velocitat "tradicional", la distància que recorre un punt per unitat de temps. En un disc que gira, un punt a la vora es mou molt més ràpid (recorre més distància en el mateix temps) que un punt a prop del centre. Es mesura en m/s.</p>
+                        </div>
+                        <div class="bg-slate-100 p-4 rounded-lg">
+                            <p><strong class="font-semibold">Velocitat Angular ($\omega$):</strong> És una mesura de com de ràpid gira l'objecte en conjunt. Expressa l'angle que gira l'objecte per unitat de temps. <strong class="font-semibold">Tots els punts d'un cos rígid tenen la mateixa velocitat angular</strong>. Es mesura en <strong class="font-semibold">radians per segon (rad/s)</strong>.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white border border-slate-200 p-4 rounded-lg">
+                        <h4 class="font-semibold text-slate-700">La Relació entre $v$ i $\omega$</h4>
+                        <p>Ambdues velocitats estan directament relacionades a través del radi de gir ($r$). La velocitat lineal d'un punt és igual a la velocitat angular de l'objecte multiplicada per la distància d'aquest punt a l'eix de gir.</p>
+                        $$ v = \omega \cdot r $$
+                        
+                        <p class="text-sm text-slate-600 mt-2">On $v$ és la velocitat lineal (m/s), $\omega$ és la velocitat angular (rad/s), i $r$ és el radi o distància a l'eix (m).</p>
+                        <p class="text-sm text-slate-600 mt-4"><strong>Recordatori de Conversió:</strong> Sovint, la velocitat de gir es dóna en revolucions per minut (rpm). Per treballar amb les fórmules físiques, és imprescindible convertir-la a rad/s:</p>
+                        $$ \omega (rad/s) = N (rpm) \cdot \frac{2\pi \text{ rad}}{1 \text{ rev}} \cdot \frac{1 \text{ min}}{60 \text{ s}} = N \cdot \frac{2\pi}{60} $$
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-[#2156A0] pt-6">Parell Motor ($M$)</h3>
+                    <p>El <strong class="font-semibold">parell motor</strong> (o moment de força) és l'equivalent rotacional de la força. És la capacitat que té una força per provocar o modificar un gir al voltant d'un eix. No depèn només de la força, sinó també d'on s'aplica.</p>
+                    
+                    <div class="bg-slate-100 p-4 rounded-lg">
+                        <p class="font-semibold">Definició de Parell Motor:</p>
+                        $$ M = F \cdot d $$
+                        <p class="text-sm text-slate-600 mt-2">On $M$ és el parell motor (en Newton-metre, N·m), $F$ és la component de la força perpendicular al braç de palanca (N) i $d$ és la distància des de l'eix de gir fins al punt d'aplicació de la força (m).</p>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-[#2156A0]">Treball i Potència en Rotació</h3>
+                    <p>De la mateixa manera que en el moviment lineal, podem definir el treball i la potència per a sistemes que giren.</p>
+
+                    <div class="bg-slate-100 p-4 rounded-lg space-y-4">
+                        <div>
+                             <p class="font-semibold">Treball en Rotació:</p>
+                            $$ W_{rot} = M \cdot \theta $$
+                             <p class="text-sm text-slate-600 mt-2">On $W_{rot}$ és el treball (J), $M$ és el parell motor constant (N·m) i $\theta$ és l'angle girat (en <strong class="font-semibold">radians</strong>).</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Potència en Rotació:</p>
+                            $$ P_{rot} = M \cdot \omega $$
+                            <p class="text-sm text-slate-600 mt-2">On $P_{rot}$ és la potència (W), $M$ és el parell motor (N·m) i $\omega$ és la velocitat angular (en <strong class="font-semibold">rad/s</strong>).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Energia i Rendiment -->
+            <section id="energia-rendiment">
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6 mt-12">3. Energia Mecànica i Eficiència</h2>
+                
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-[#2156A0]">Energia Mecànica ($E_{mec}$)</h3>
+                    <p>L' <strong class="font-semibold">energia mecànica</strong> d'un cos és la suma de la seva energia deguda al moviment (energia cinètica) i la seva energia deguda a la seva posició en un camp gravitatori (energia potencial).</p>
+                    
+                    <div class="bg-slate-100 p-4 rounded-lg space-y-4">
+                        <div>
+                             <p class="font-semibold">Energia Cinètica ($E_c$):</p>
+                            <p>És l'energia associada al moviment. Un objecte amb més massa o més velocitat té més energia cinètica.</p>
+                            $$ E_c = \frac{1}{2} m v^2 $$
+                             <p class="text-sm text-slate-600 mt-2">On $m$ és la massa (kg) i $v$ és la velocitat (m/s).</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Energia Potencial Gravitatòria ($E_p$):</p>
+                            <p>És l'energia emmagatzemada que té un objecte per la seva posició (altura) respecte a un nivell de referència.</p>
+                            $$ E_p = m \cdot g \cdot h $$
+                            <p class="text-sm text-slate-600 mt-2">On $m$ és la massa (kg), $g$ és l'acceleració de la gravetat (aprox. 9.8 m/s²) i $h$ és l'altura (m).</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Energia Mecànica Total:</p>
+                             $$ E_{mec} = E_{c} + E_{p} $$
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold text-[#2156A0]">Rendiment ($\eta$)</h3>
+                    <p>En el món real, cap màquina o procés és perfecte. A causa de la fricció i altres pèrdues, part de l'energia que subministrem a una màquina es dissipa, normalment en forma de calor. El <strong class="font-semibold">rendiment</strong> és la mesura de l'eficiència d'aquesta transformació d'energia.</p>
+
+                    <div class="bg-slate-100 p-4 rounded-lg">
+                        <p class="font-semibold">Definició de Rendiment:</p>
+                        $$ \eta = \frac{P_{útil}}{P_{subministrada}} = \frac{P_{sortida}}{P_{entrada}} = \frac{W_{útil}}{W_{subministrat}} $$
+                        <p class="text-sm text-slate-600 mt-2">El rendiment ($\eta$, lletra grega 'eta') és un nombre adimensional, sempre menor que 1. Sovint s'expressa en percentatge (p. ex., un rendiment de 0.85 equival a un 85%). Això significa que el 85% de la potència d'entrada es converteix en potència útil, mentre que el 15% restant es perd.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16 py-4 border-t border-slate-200 text-sm text-slate-500 space-y-2">
+            <p>&copy; 2025 Vicent Cardona. Departament de Tecnologia. IES Quartó de Portmany</p>
+            <p>Aquesta obra està subjecta a una llicència de Creative Commons
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="text-blue-600 hover:underline">CC BY-NC-SA 4.0</a>
+            </p>
+            <p>
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                    <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Llicència de Creative Commons" class="inline-block">
+                </a>
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // Script to render LaTeX formulas using KaTeX
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
+
