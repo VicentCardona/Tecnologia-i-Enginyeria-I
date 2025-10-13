@@ -25,7 +25,7 @@
         }
         .solution-box {
             border: 1px solid #e2e8f0;
-            border-left: 4px solid #4FCCE8;
+            border-left: 4px solid #4ade80; /* Green accent */
             border-radius: 0.5rem;
             padding: 1.5rem;
             margin-top: 1.5rem;
@@ -59,16 +59,16 @@
                     <p class="font-semibold text-slate-700">1. Un cotxe de 1200 kg accelera a raó de 3 m/s². Quina força neta està actuant sobre el vehicle?</p>
                     <div class="mt-4 text-sm space-y-2">
                         <p><strong class="font-medium text-slate-600">Dades:</strong> $m = 1200 \text{ kg}$, $a = 3 \text{ m/s}^2$</p>
-                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> Segona Llei de Newton: $F = m \cdot a$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $F = m \cdot a$</p>
                         <p><strong class="font-medium text-slate-600">Càlcul:</strong> $F = 1200 \text{ kg} \cdot 3 \text{ m/s}^2 = 3600 \text{ N}$</p>
                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 3600 N</p>
                     </div>
                 </div>
 
                 <div class="solution-box">
-                    <p class="font-semibold text-slate-700">2. Un operari empeny una caixa amb una força constant de 150 N al llarg d'una distància de 10 metres en la mateixa direcció del moviment. Quin treball ha realitzat?</p>
+                    <p class="font-semibold text-slate-700">2. Un operari empeny una caixa amb una força constant de 150 N al llarg d'una distància de 10 metres. Quin treball ha realitzat?</p>
                      <div class="mt-4 text-sm space-y-2">
-                        <p><strong class="font-medium text-slate-600">Dades:</strong> $F = 150 \text{ N}$, $d = 10 \text{ m}$, $\alpha = 0º$</p>
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $F = 150 \text{ N}$, $d = 10 \text{ m}$</p>
                         <p><strong class="font-medium text-slate-600">Fórmula:</strong> $W = F \cdot d$</p>
                         <p><strong class="font-medium text-slate-600">Càlcul:</strong> $W = 150 \text{ N} \cdot 10 \text{ m} = 1500 \text{ J}$</p>
                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 1500 J</p>
@@ -76,18 +76,108 @@
                 </div>
                 
                 <div class="solution-box">
-                    <p class="font-semibold text-slate-700">3. Una grua puja un contenidor de 300 kg amb una acceleració de 0.5 m/s². Quina és la tensió que ha de suportar el cable? (g = 9.8 m/s²)</p>
+                    <p class="font-semibold text-slate-700">3. Una grua puja un contenidor de 300 kg amb una acceleració de 0.5 m/s². Quina és la tensió del cable? (g = 9.8 m/s²)</p>
                      <div class="mt-4 text-sm space-y-2">
                         <p><strong class="font-medium text-slate-600">Dades:</strong> $m = 300 \text{ kg}$, $a = 0.5 \text{ m/s}^2$</p>
-                        <p><strong class="font-medium text-slate-600">Raonament:</strong> La tensió (T) ha de vèncer el pes (P) i a més proporcionar la força per accelerar la massa.</p>
-                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $P = m \cdot g$; $F_{acc} = m \cdot a$; $T = P + F_{acc}$</p>
-                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $P = 300 \cdot 9.8 = 2940 \text{ N}$; $F_{acc} = 300 \cdot 0.5 = 150 \text{ N}$; $T = 2940 + 150 = 3090 \text{ N}$</p>
+                        <p><strong class="font-medium text-slate-600">Raonament:</strong> La tensió (T) ha de vèncer el pes (P) i a més proporcionar la força per accelerar ($F_a$).</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $T = P + F_a = (m \cdot g) + (m \cdot a)$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $T = (300 \cdot 9.8) + (300 \cdot 0.5) = 2940 + 150 = 3090 \text{ N}$</p>
                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 3090 N</p>
                     </div>
                 </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">4. Arrosseguem un carretó amb una força de 50 N que forma un angle de 30º amb l'horitzontal, desplaçant-lo 20 metres. Quin treball s'ha realitzat?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $F = 50 \text{ N}$, $d = 20 \text{ m}$, $\alpha = 30º$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $W = F \cdot d \cdot \cos(\alpha)$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $W = 50 \cdot 20 \cdot \cos(30º) = 1000 \cdot 0.866 = 866 \text{ J}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 866 J</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">5. Un ascensor realitza un treball de 20.000 J en 5 segons. Quina és la seva potència mitjana?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $W = 20000 \text{ J}$, $t = 5 \text{ s}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $P = W/t$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $P = 20000 / 5 = 4000 \text{ W}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 4000 W (o 4 kW)</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">6. Un vehicle es mou a 25 m/s (90 km/h) vencent una resistència de 800 N. Quina potència desenvolupa el motor?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $v = 25 \text{ m/s}$, $F_{res} = 800 \text{ N}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $P = F \cdot v$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $P = 800 \text{ N} \cdot 25 \text{ m/s} = 20000 \text{ W}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 20000 W (o 20 kW)</p>
+                    </div>
+                </div>
                 
-                <!-- ... Solutions for problems 4 to 30 following the same structure ... -->
-                <!-- For brevity, only a few examples are shown here. The full file would contain all 30 solutions. -->
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">7. Un cotxe de 1400 kg puja una rampa del 5% a 54 km/h constants. Si la força de fregament és de 350 N, quina potència ha de desenvolupar el motor?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $m=1400 \text{ kg}$, $v=54 \text{ km/h}$, $F_{freg}=350 \text{ N}$, pendent=5%</p>
+                        <p><strong class="font-medium text-slate-600">Raonament:</strong> La força del motor ($F_m$) ha de vèncer el fregament ($F_{freg}$) i la component del pes paral·lela a la rampa ($P_x$).</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $P_x = P \cdot \sin(\alpha) = m g \sin(\alpha)$; $F_m = F_{freg} + P_x$; $P = F_m \cdot v$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Convertim la velocitat: $v = 54 \text{ km/h} \cdot (1000\text{m}/3600\text{s}) = 15 \text{ m/s}$</p>
+                        <p>2. Calculem l'angle: $\tan(\alpha) = 5/100 = 0.05 \implies \alpha = \arctan(0.05) \approx 2.86º$</p>
+                        <p>3. Calculem $P_x$: $P_x = 1400 \cdot 9.8 \cdot \sin(2.86º) = 13720 \cdot 0.0499 = 684.6 \text{ N}$</p>
+                        <p>4. Calculem la força del motor: $F_m = 350 + 684.6 = 1034.6 \text{ N}$</p>
+                        <p>5. Calculem la potència: $P = 1034.6 \cdot 15 = 15519 \text{ W}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 15519 W (o 15.52 kW)</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Moviment Rotatori: Velocitat Angular i Parell</h2>
+                
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">8. Per afluixar un cargol, apliquem una força de 120 N a l'extrem d'una clau anglesa de 30 cm de longitud. Quin és el parell motor que estem aplicant?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $F = 120 \text{ N}$, $d = 30 \text{ cm} = 0.3 \text{ m}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $M = F \cdot d$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $M = 120 \text{ N} \cdot 0.3 \text{ m} = 36 \text{ N·m}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 36 N·m</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">9. El motor d'un cotxe gira a 3000 rpm. Expressa aquesta velocitat en radians per segon (rad/s).</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $N = 3000 \text{ rpm}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $\omega = N \cdot \frac{2\pi}{60}$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $\omega = 3000 \cdot \frac{2\pi}{60} = 100\pi \approx 314.16 \text{ rad/s}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 314.16 rad/s</p>
+                    </div>
+                </div>
+                
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">10. Les rodes d'una bicicleta tenen un diàmetre de 68 cm. Si el ciclista es desplaça a 25 km/h, quina és la velocitat angular de les rodes en rad/s i en rpm?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $D = 68 \text{ cm} \implies r = 0.34 \text{ m}$, $v = 25 \text{ km/h}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $v = \omega \cdot r \implies \omega = v/r$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Convertim velocitat lineal: $v = 25 \text{ km/h} \cdot (1000\text{m}/3600\text{s}) = 6.94 \text{ m/s}$</p>
+                        <p>2. Calculem velocitat angular: $\omega = 6.94 \text{ m/s} / 0.34 \text{ m} = 20.42 \text{ rad/s}$</p>
+                        <p>3. Convertim a rpm: $N = \omega \cdot \frac{60}{2\pi} = 20.42 \cdot \frac{60}{2\pi} = 195 \text{ rpm}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 20.42 rad/s  o 195 rpm</p>
+                    </div>
+                </div>
+                
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">11. Una roda de 40 cm de radi gira a una velocitat angular constant de 15 rad/s. Quina és la velocitat lineal d'un punt situat a la vora de la roda?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $r = 40 \text{ cm} = 0.4 \text{ m}$, $\omega = 15 \text{ rad/s}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $v = \omega \cdot r$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $v = 15 \text{ rad/s} \cdot 0.4 \text{ m} = 6 \text{ m/s}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 6 m/s</p>
+                    </div>
+                </div>
 
                 <div class="solution-box">
                     <p class="font-semibold text-slate-700">12. Un motor elèctric subministra un parell motor constant de 50 N·m mentre gira a 1500 rpm. Quina potència desenvolupa el motor?</p>
@@ -102,34 +192,244 @@
                 </div>
 
                 <div class="solution-box">
-                    <p class="font-semibold text-slate-700">18. Una pilota de 1 kg es deixa caure des d'una altura de 20 m. Ignorant la fricció amb l'aire, quina serà la seva velocitat just abans de tocar a terra?</p>
-                     <div class="mt-4 text-sm space-y-2">
-                        <p><strong class="font-medium text-slate-600">Dades:</strong> $m = 1 \text{ kg}$, $h = 20 \text{ m}$</p>
-                        <p><strong class="font-medium text-slate-600">Raonament:</strong> Pel principi de conservació de l'energia mecànica, tota l'energia potencial inicial es converteix en energia cinètica final.</p>
-                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $E_{p, inicial} = E_{c, final} \implies mgh = \frac{1}{2}mv^2$</p>
+                    <p class="font-semibold text-slate-700">13. Un trepant aplica un parell de 10 N·m i gira un total de 50 revolucions per fer un forat. Quin treball ha realitzat?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $M = 10 \text{ N·m}$, angle = 50 rev</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $W = M \cdot \theta$</p>
                         <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
-                        <p>Podem simplificar la massa de l'equació: $gh = \frac{1}{2}v^2 \implies v = \sqrt{2gh}$</p>
-                        <p>$v = \sqrt{2 \cdot 9.8 \cdot 20} = \sqrt{392} = 19.8 \text{ m/s}$</p>
+                        <p>1. Convertim l'angle a radians: $\theta = 50 \text{ rev} \cdot 2\pi \text{ rad/rev} = 100\pi \approx 314.16 \text{ rad}$</p>
+                        <p>2. Calculem el treball: $W = 10 \text{ N·m} \cdot 314.16 \text{ rad} = 3141.6 \text{ J}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 3141.6 J</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">14. Un volant d'inèrcia és accelerat des del repòs fins a 500 rpm en 8 segons per un parell motor constant. Si el treball realitzat va ser de 4000 J, quin és el valor del parell motor?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $\omega_0=0$, $N_f=500 \text{ rpm}$, $t=8\text{ s}$, $W=4000 \text{ J}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $M = W / \theta$; $\theta = (\omega_0 + \omega_f)/2 \cdot t$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Convertim velocitat final: $\omega_f = 500 \cdot (2\pi/60) = 52.36 \text{ rad/s}$</p>
+                        <p>2. Calculem l'angle girat: $\theta = (0 + 52.36)/2 \cdot 8 = 209.44 \text{ rad}$</p>
+                        <p>3. Calculem el parell: $M = 4000 \text{ J} / 209.44 \text{ rad} = 19.1 \text{ N·m}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 19.1 N·m</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                 <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Energia Mecànica</h2>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">15. Calcula l'energia cinètica d'un camió de 8000 kg que es mou a 72 km/h.</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $m = 8000 \text{ kg}$, $v = 72 \text{ km/h}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $E_c = \frac{1}{2}mv^2$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Convertim velocitat: $v = 72 \text{ km/h} \cdot (1000\text{m}/3600\text{s}) = 20 \text{ m/s}$</p>
+                        <p>2. Calculem l'energia: $E_c = 0.5 \cdot 8000 \cdot (20)^2 = 1,600,000 \text{ J}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 1,600,000 J (o 1.6 MJ)</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">16. Un test de 2 kg es troba a la barana d'un balcó a 15 metres d'altura. Quina és la seva energia potencial gravitatòria?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $m = 2 \text{ kg}$, $h=15 \text{ m}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $E_p = mgh$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $E_p = 2 \cdot 9.8 \cdot 15 = 294 \text{ J}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 294 J</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">17. Un ocell de 0.5 kg vola a 50 m d'altura amb una velocitat de 8 m/s. Quina és la seva energia mecànica total?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $m=0.5 \text{ kg}$, $h=50 \text{ m}$, $v=8 \text{ m/s}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $E_m = E_c + E_p = \frac{1}{2}mv^2 + mgh$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>$E_c = 0.5 \cdot 0.5 \cdot (8)^2 = 16 \text{ J}$</p>
+                        <p>$E_p = 0.5 \cdot 9.8 \cdot 50 = 245 \text{ J}$</p>
+                        <p>$E_m = 16 + 245 = 261 \text{ J}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 261 J</p>
+                    </div>
+                </div>
+                
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">18. Una pilota de 1 kg es deixa caure des d'una altura de 20 m. Ignorant la fricció, quina serà la seva velocitat just abans de tocar a terra?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Raonament:</strong> Per conservació de l'energia mecànica, tota l'energia potencial inicial ($E_{p,i}$) es converteix en energia cinètica final ($E_{c,f}$).</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $E_{p,i} = E_{c,f} \implies mgh = \frac{1}{2}mv^2$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>Simplifiquem la massa: $gh = \frac{1}{2}v^2 \implies v = \sqrt{2gh}$</p>
+                        <p>$v = \sqrt{2 \cdot 9.8 \cdot 20} = \sqrt{392} \approx 19.8 \text{ m/s}$</p>
                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 19.8 m/s</p>
                     </div>
                 </div>
 
                 <div class="solution-box">
-                    <p class="font-semibold text-slate-700">27. Un motor elèctric gira a 2500 rpm i, a través d'un sistema d'engranatges, acciona un torn que té un parell motor a la sortida de 80 N·m. El rendiment total del sistema és del 85%. Quina potència útil desenvolupa el torn i quina potència consumeix el motor?</p>
-                     <div class="mt-4 text-sm space-y-2">
-                        <p><strong class="font-medium text-slate-600">Dades:</strong> $N_{motor} = 2500 \text{ rpm}$, $M_{sortida} = 80 \text{ N·m}$, $\eta = 0.85$</p>
-                        <p><strong class="font-medium text-slate-600">Raonament:</strong> Per calcular la potència útil a la sortida ($P_{útil} = M_{sortida} \cdot \omega_{sortida}$), necessitaríem saber la velocitat de sortida ($\omega_{sortida}$), la qual depèn de la relació de transmissió, una dada que no tenim. El problema no es pot resoldre numèricament sense aquesta dada.</p>
-                        <p><strong class="font-medium text-slate-600">Solució expressada:</strong></p>
-                        <p>1. Potència útil: $P_{útil} = M_{sortida} \cdot \omega_{sortida} = 80 \cdot \omega_{sortida} \text{ (W)}$</p>
-                        <p>2. Potència consumida: $P_{consumida} = \frac{P_{útil}}{\eta} = \frac{80 \cdot \omega_{sortida}}{0.85} \text{ (W)}$</p>
-                        <p class="mt-2 p-2 bg-yellow-100 text-yellow-800 rounded-md font-semibold">Resultat: El problema no es pot resoldre numèricament sense conèixer la relació de transmissió del sistema d'engranatges.</p>
+                    <p class="font-semibold text-slate-700">19. Un ciclista i la seva bicicleta, amb una massa total de 80 kg, tenen una energia cinètica de 2500 J. A quina velocitat es desplacen?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $m=80 \text{ kg}$, $E_c = 2500 \text{ J}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $E_c = \frac{1}{2}mv^2 \implies v = \sqrt{2E_c / m}$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $v = \sqrt{(2 \cdot 2500) / 80} = \sqrt{62.5} \approx 7.9 \text{ m/s}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 7.9 m/s (o 28.4 km/h)</p>
                     </div>
                 </div>
 
+                 <div class="solution-box">
+                    <p class="font-semibold text-slate-700">20. Un vagó de muntanya russa de 400 kg es troba a 30 m d'altura, movent-se a 2 m/s. Quina serà la seva velocitat al punt més baix, a 5 m d'altura?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Raonament:</strong> Per conservació de l'energia, l'energia mecànica inicial ($E_{m,i}$) és igual a la final ($E_{m,f}$).</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $E_{c,i} + E_{p,i} = E_{c,f} + E_{p,f}$</p>
+                        <p>$\frac{1}{2}mv_i^2 + mgh_i = \frac{1}{2}mv_f^2 + mgh_f$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>Simplifiquem la massa: $\frac{1}{2}v_i^2 + gh_i = \frac{1}{2}v_f^2 + gh_f$</p>
+                        <p>$0.5 \cdot (2)^2 + 9.8 \cdot 30 = 0.5 \cdot v_f^2 + 9.8 \cdot 5$</p>
+                        <p>$2 + 294 = 0.5v_f^2 + 49 \implies 296 - 49 = 0.5v_f^2 \implies 247 = 0.5v_f^2$</p>
+                        <p>$v_f = \sqrt{2 \cdot 247} = \sqrt{494} \approx 22.2 \text{ m/s}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 22.2 m/s</p>
+                    </div>
+                </div>
             </section>
             
-            <!-- Rest of the solutions -->
+            <section>
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Rendiment i Eficiència de les Màquines</h2>
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">21. Un motor elèctric consumeix 1000 W i genera una potència mecànica útil de 850 W. Quin és el seu rendiment?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $P_{consumida}=1000 \text{ W}$, $P_{útil}=850 \text{ W}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $\eta = P_{útil} / P_{consumida}$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $\eta = 850 / 1000 = 0.85$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 0.85 (o 85%)</p>
+                    </div>
+                </div>
 
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">22. Una bomba d'aigua té un rendiment del 75%. Si el motor li subministra 2000 W, quina és la potència útil?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $\eta=0.75$, $P_{subministrada}=2000 \text{ W}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $P_{útil} = P_{subministrada} \cdot \eta$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $P_{útil} = 2000 \cdot 0.75 = 1500 \text{ W}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 1500 W</p>
+                    </div>
+                </div>
+                
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">23. Volem una grua amb una potència útil de 5000 W. Si el seu motor té un rendiment del 80%, quina potència ha de consumir?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $P_{útil}=5000 \text{ W}$, $\eta=0.80$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $P_{consumida} = P_{útil} / \eta$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $P_{consumida} = 5000 / 0.80 = 6250 \text{ W}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 6250 W</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">24. Un motor elèctric ($\eta=90\%$) connectat a un reductor ($\eta=85\%$) consumeix 2 kW. Quina és la potència útil final?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $\eta_1 = 0.90$, $\eta_2 = 0.85$, $P_{consumida} = 2000 \text{ W}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $P_{final} = P_{consumida} \cdot \eta_1 \cdot \eta_2$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $P_{final} = 2000 \cdot 0.90 \cdot 0.85 = 1530 \text{ W}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 1530 W</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">25. Una bomba ($\eta=60\%$) necessita aportar 1.2 kW de potència útil. Quanta energia (en kWh) es perdrà en 3 hores?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $P_{útil} = 1.2 \text{ kW}$, $\eta = 0.60$, $t = 3 \text{ h}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $P_{consumida} = P_{útil} / \eta$; $P_{perduda} = P_{consumida} - P_{útil}$; $E_{perduda} = P_{perduda} \cdot t$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Potència consumida: $P_{consumida} = 1.2 \text{ kW} / 0.60 = 2 \text{ kW}$</p>
+                        <p>2. Potència perduda: $P_{perduda} = 2 \text{ kW} - 1.2 \text{ kW} = 0.8 \text{ kW}$</p>
+                        <p>3. Energia perduda: $E_{perduda} = 0.8 \text{ kW} \cdot 3 \text{ h} = 2.4 \text{ kWh}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 2.4 kWh</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Problemes de Síntesi</h2>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">26. Una grua eleva una càrrega de 500 kg a una altura de 20 metres en 10 segons a velocitat constant. Es demana...</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $m=500 \text{ kg}$, $h=20 \text{ m}$, $t=10 \text{ s}$, $\eta=0.70$</p>
+                        <p><strong class="font-medium text-slate-600">a) El treball realitzat per la grua.</strong></p>
+                        <p>$W_{útil} = F \cdot d = (m \cdot g) \cdot h = 500 \cdot 9.8 \cdot 20 = 98000 \text{ J}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (a): 98000 J</p>
+                        
+                        <p class="mt-4"><strong class="font-medium text-slate-600">b) La potència útil desenvolupada.</strong></p>
+                        <p>$P_{útil} = W_{útil} / t = 98000 \text{ J} / 10 \text{ s} = 9800 \text{ W}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (b): 9800 W</p>
+
+                        <p class="mt-4"><strong class="font-medium text-slate-600">c) Si el motor té un rendiment del 70%, quina potència ha consumit?</strong></p>
+                        <p>$P_{consumida} = P_{útil} / \eta = 9800 \text{ W} / 0.70 = 14000 \text{ W}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (c): 14000 W</p>
+                    </div>
+                </div>
+                
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">27. Un motor gira a 2500 rpm i, a través d'engranatges ($\eta=85\%$), acciona un torn amb un parell de sortida de 80 N·m. Quina potència útil desenvolupa i quina consumeix?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Raonament:</strong> Falta una dada clau: la relació de transmissió ($i$) o la velocitat final. Sense ella no podem connectar l'entrada amb la sortida.</p>
+                        <p class="mt-2 p-2 bg-yellow-100 text-yellow-800 rounded-md font-semibold">Resultat: El problema no es pot resoldre numèricament.</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">28. Un cabrestant té un motor que proporciona 150 N·m a 120 rpm. El tambor té un radi de 10 cm. Es demana...</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $M=150 \text{ N·m}$, $N=120 \text{ rpm}$, $r=0.1 \text{ m}$</p>
+                        <p class="mt-2"><strong class="font-medium text-slate-600">a) La potència útil del motor.</strong></p>
+                        <p>1. Velocitat angular: $\omega = 120 \cdot (2\pi/60) = 12.57 \text{ rad/s}$</p>
+                        <p>2. Potència útil: $P_{útil} = M \cdot \omega = 150 \cdot 12.57 = 1885.5 \text{ W}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (a): 1885.5 W</p>
+                        
+                        <p class="mt-4"><strong class="font-medium text-slate-600">b) La velocitat lineal a la qual s'eleva la càrrega.</strong></p>
+                        <p>$v = \omega \cdot r = 12.57 \text{ rad/s} \cdot 0.1 \text{ m} = 1.257 \text{ m/s}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (b): 1.26 m/s</p>
+
+                        <p class="mt-4"><strong class="font-medium text-slate-600">c) El pes màxim (en N i kg) que pot aixecar.</strong></p>
+                        <p>1. Força màxima (pes): $F_{max} = M / r = 150 \text{ N·m} / 0.1 \text{ m} = 1500 \text{ N}$</p>
+                        <p>2. Massa: $m = F / g = 1500 / 9.8 = 153.06 \text{ kg}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (c): 1500 N o 153.1 kg</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">29. Un cotxe elèctric de 1500 kg puja una pendent a 18 m/s, superant una resistència de 600 N. En 30 s puja 40 m d'altura. Amb un rendiment del 90%, quina potència útil total i elèctrica consumida?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Raonament:</strong> La potència útil total té dos components: la necessària per vèncer la resistència ($P_{res}$) i la necessària per guanyar energia potencial ($P_{pot}$).</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul Potència Útil:</strong></p>
+                        <p>1. $P_{res} = F_{res} \cdot v = 600 \text{ N} \cdot 18 \text{ m/s} = 10800 \text{ W}$</p>
+                        <p>2. $P_{pot} = W_{pot} / t = (mgh)/t = (1500 \cdot 9.8 \cdot 40) / 30 = 19600 \text{ W}$</p>
+                        <p>3. $P_{útil} = P_{res} + P_{pot} = 10800 + 19600 = 30400 \text{ W}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (P. Útil): 30400 W (30.4 kW)</p>
+
+                        <p class="mt-4"><strong class="font-medium text-slate-600">Càlcul Potència Elèctrica Consumida:</strong></p>
+                        <p>$P_{elèctrica} = P_{útil} / \eta = 30400 / 0.90 = 33777.8 \text{ W}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (P. Elèctrica): 33778 W (33.8 kW)</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">30. Un ventilador industrial és accionat per un motor de 800 W amb $\eta=85\%$. Les pales giren a 900 rpm. Quin és el parell motor a l'eix? Si accelera 15 kg/s d'aire fins a 10 m/s, quina és l'eficiència de les pales?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Part 1: Parell a l'eix</strong></p>
+                        <p>1. Potència a l'eix: $P_{eix} = P_{consumida} \cdot \eta_{motor} = 800 \cdot 0.85 = 680 \text{ W}$</p>
+                        <p>2. Velocitat angular: $\omega = 900 \cdot (2\pi/60) = 94.25 \text{ rad/s}$</p>
+                        <p>3. Parell motor: $M = P_{eix} / \omega = 680 / 94.25 = 7.21 \text{ N·m}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (Part 1): 7.21 N·m</p>
+                        
+                        <p class="mt-4"><strong class="font-medium text-slate-600">Part 2: Eficiència de les pales</strong></p>
+                        <p>1. Potència útil (transferida a l'aire): $P_{aire} = \Delta E_c / t = \frac{1}{2}\dot{m}v^2 = 0.5 \cdot 15 \cdot (10)^2 = 750 \text{ W}$</p>
+                        <p>2. Eficiència de les pales: $\eta_{pales} = P_{aire} / P_{eix} = 750 \text{ W} / 680 \text{ W} \approx 1.10$</p>
+                        <p class="mt-2 p-2 bg-yellow-100 text-yellow-800 rounded-md font-semibold">Resultat (Part 2): 110%. <strong class="font-medium">Nota:</strong> Resultat físicament impossible ($\eta > 100\%$), la qual cosa indica que les dades són inconsistents.</p>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <!-- Footer -->
@@ -142,7 +442,6 @@
     </div>
     
     <script>
-        // Script to render LaTeX formulas using KaTeX
         document.addEventListener("DOMContentLoaded", function() {
             renderMathInElement(document.body, {
                 delimiters: [
@@ -154,3 +453,4 @@
     </script>
 </body>
 </html>
+
