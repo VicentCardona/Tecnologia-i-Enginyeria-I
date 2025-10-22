@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari UP1 - Anàlisi de Sistemes Mecànics</title>
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" xintegrity="sha384-n8MVd4RsNIU0KOVEMMZMSchEorqbvhFcuOxgnTryKaVkucguuTMMsPiiCpo1gUWV" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" xintegrity="sha384-XjKyOOlVwcpaNlchBOmLAfUGrXOdGbSMMCQH2W1CsRHBgoLhecGe4hSdcMAy5Nb2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" xintegrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .katex-display {
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 0.25rem 0;
+        }
+        .formula-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            page-break-inside: avoid;
+        }
+        .formula-box h4 {
+            font-weight: 600;
+            color: #1e3a8a; /* Blue-800 */
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .formula-box p {
+            margin: 0.5rem 0;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                font-family: 'Inter', sans-serif;
+                font-size: 10pt;
+                color: #000;
+                background-color: #fff;
+            }
+            header, footer, nav, .print-button {
+                display: none;
+            }
+            main {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                margin: 0;
+            }
+            .formula-box {
+                box-shadow: none;
+                border: 1px solid #999;
+                background-color: #fff;
+            }
+            .grid {
+                display: grid !important;
+            }
+            .md\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+            .gap-6 {
+                gap: 1.5rem !important;
+            }
+            /* Assegura que el títol del nom s'imprimeixi */
+            .print-header {
+                display: block !important;
+                margin-bottom: 1.5rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid #999;
+            }
+            h1, h2 {
+                color: #000;
+            }
+        }
+        
+        .print-header {
+            display: none; /* Amagat per defecte, només visible a l'imprimir */
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+
+        <!-- Header -->
+        <header class="bg-[#2156A0] text-white p-6 rounded-xl shadow-lg mb-8 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl md:text-4xl font-bold">Formulari Examen - UP 1</h1>
+                <p class="mt-2 text-blue-200">Recull de fórmules d'Anàlisi de Sistemes Mecànics.</p>
+            </div>
+            <button onclick="window.print()" class="print-button bg-[#D4560B] text-white font-semibold px-5 py-3 rounded-lg shadow-md hover:bg-orange-700 transition-colors">
+                Imprimir
+            </button>
+        </header>
+        
+        <!-- Navigation Buttons -->
+        <nav class="mb-8 flex space-x-4 print-button">
+            <a href="index.html" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">&larr; Tornar a l'inici</a>
+            <a href="up1_apunts.html" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">Consultar Apunts Teòrics &rarr;</a>
+        </nav>
+
+        <main class="bg-white p-6 sm:p-8 rounded-lg shadow-md">
+            
+            <div class="print-header">
+                <h1 class="text-2xl font-bold">Formulari Tecnologia i Enginyeria I - UP 1</h1>
+                <p class="text-lg mt-4">Nom i Cognoms: _________________________________________________</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Columna 1 -->
+                <div class="space-y-6">
+                    <div class="formula-box">
+                        <h4>Fonaments Físics (Lineals)</h4>
+                        <p><strong>Força (Newton):</strong> $F = m \cdot a$</p>
+                        <p><strong>Treball (Joule):</strong> $W = F \cdot d \cdot \cos(\alpha)$</p>
+                        <p><strong>Potència (Watt):</strong> $P = \frac{W}{t}$</p>
+                        <p><strong>Potència (Lineal):</strong> $P = F \cdot v$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>Fonaments (Rotació)</h4>
+                        <p><strong>Conversió RPM $\to$ rad/s:</strong> $\omega = N \cdot \frac{2\pi}{60}$</p>
+                        <p><strong>Velocitat Lineal:</strong> $v = \omega \cdot r$</p>
+                        <p><strong>Parell Motor (N·m):</strong> $M = F \cdot d$</p>
+                        <p><strong>Treball (Rotació):</strong> $W = M \cdot \theta$</p>
+                        <p><strong>Potència (Rotació):</strong> $P = M \cdot \omega$</p>
+                    </div>
+
+                     <div class="formula-box">
+                        <h4>Màquines Simples</h4>
+                        <p><strong>Avantatge Mecànic:</strong> $AM = \frac{F_R}{F_P}$</p>
+                        <p><strong>Llei de la Palanca:</strong> $F_P \cdot d_P = F_R \cdot d_R$</p>
+                        <p><strong>Polispast (n politges mòbils):</strong> $AM = n$</p>
+                    </div>
+                    
+                    <div class="formula-box">
+                        <h4>Transformació de Moviment</h4>
+                        <p><strong>Pinyó-Cremallera (Avanç/volta):</strong> $L = \pi \cdot m \cdot Z$</p>
+                        <p><strong>Cargol-Femella (Avanç/volta):</strong> $L = p$</p>
+                        <p><strong>Velocitat lineal (Cargol):</strong> $v = N \cdot p$ (amb $N$ en voltes/s)</p>
+                    </div>
+                </div>
+
+                <!-- Columna 2 -->
+                <div class="space-y-6">
+                    <div class="formula-box">
+                        <h4>Energia i Rendiment</h4>
+                        <p><strong>Energia Cinètica:</strong> $E_c = \frac{1}{2}mv^2$</p>
+                        <p><strong>Energia Potencial:</strong> $E_p = mgh$</p>
+                        <p><strong>Energia Mecànica:</strong> $E_m = E_c + E_p$</p>
+                        <p><strong>Rendiment:</strong> $\eta = \frac{P_{útil}}{P_{subministrada}}$</p>
+                        <p><strong>Rendiment Total:</strong> $\eta_{total} = \eta_1 \cdot \eta_2 \cdot \dots$</p>
+                    </div>
+
+                    <div class="formula-box">
+                        <h4>Transmissió Circular</h4>
+                        <p><strong>Rel. de Transmissió ($i$):</strong></p>
+                        $$ i = \frac{\omega_{ent}}{\omega_{sor}} = \frac{N_{ent}}{N_{sor}} $$
+                        <p><strong>Politges (Diàmetres):</strong> $i = \frac{D_{sortida}}{D_{entrada}}$</p>
+                        <p><strong>Engranatges (Dents):</strong> $i = \frac{Z_{sortida}}{Z_{entrada}}$</p>
+                        <p><strong>Trens Compostos:</strong> $i_{total} = i_1 \cdot i_2 \cdot \dots$</p>
+                    </div>
+                    
+                    <div class="formula-box">
+                        <h4>Anàlisi de Potència i Parell</h4>
+                        <p><strong>Potència a la sortida:</strong></p>
+                        $$ P_{sortida} = P_{entrada} \cdot \eta $$
+                        <p><strong>Parell a la sortida (Fórmula Clau):</strong></p>
+                        $$ M_{sortida} = M_{entrada} \cdot i \cdot \eta $$
+                    </div>
+                    
+                     <div class="formula-box">
+                        <h4>Unitats Clau del S.I.</h4>
+                        <ul class="list-disc list-inside text-sm space-y-1">
+                            <li><strong>Força:</strong> Newton (N)</li>
+                            <li><strong>Treball / Energia:</strong> Joule (J)</li>
+                            <li><strong>Potència:</strong> Watt (W) $\implies$ 1 W = 1 J/s</li>
+                            <li><strong>Parell Motor:</strong> Newton-metre (N·m)</li>
+                            <li><strong>Velocitat Angular:</strong> radians/segon (rad/s)</li>
+                            <li><strong>Angle (en fórmules):</strong> radians (rad)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16 py-4 border-t border-slate-200 text-sm text-slate-500">
+            <p>&copy; 2025 Vicent Cardona. Departament de Tecnologia. IES Quartó de Portmany</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Script to render LaTeX formulas using KaTeX
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                // *** CORRECCIÓ ***: "delimiters" ha d'estar en minúscules
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
+
