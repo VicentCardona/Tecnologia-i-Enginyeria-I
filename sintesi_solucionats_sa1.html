@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemes Síntesi Finals Solucionats - UP1</title>
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" xintegrity="sha384-n8MVd4RsNIU0KOVEMMZMSchEorqbvhFcuOxgnTryKaVkucguuTMMsPiiCpo1gUWV" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" xintegrity="sha384-XjKyOOlVwcpaNlchBOmLAfUGrXOdGbSMMCQH2W1CsRHBgoLhecGe4hSdcMAy5Nb2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" xintegrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .katex-display {
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 0.5rem 0;
+            font-size: 1.1em; 
+        }
+         .katex {
+             font-size: 1.1em;
+        }
+        .solution-box {
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #4ade80; /* Green accent */
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            background-color: #f8fafc;
+        }
+        /* Assegura que els $ no siguin interpretats erròniament fora de fórmules */
+        p, li {
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+
+        <!-- Header -->
+        <header class="bg-green-700 text-white p-6 rounded-xl shadow-lg mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold">Problemes de Síntesi Finals (Solucionats)</h1>
+            <p class="mt-2 text-green-200">Enfocament Final: Forces, Parell, Potència, Energia i Rendiment (Unitat 1).</p>
+        </header>
+        
+        <!-- Navigation Buttons -->
+        <div class="mb-8 flex space-x-4">
+            <a href="index.html" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">&larr; Tornar a l'inici</a>
+            <a href="up1_solucions.html" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">Veure Solucions Principals &rarr;</a>
+        </div>
+
+        <main class="bg-white p-6 sm:p-8 rounded-lg shadow-md space-y-10">
+
+            <section>
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Col·lecció Final de Problemes de Síntesi Resolts</h2>
+                
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">F1. Un motor elèctric consumeix 4 kW i té un rendiment del 85%. Si fa girar un eix a 1200 rpm, quin parell motor útil ($M_u$) proporciona?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $P_{cons}=4000 \text{ W}$, $\eta=0.85$, $N=1200 \text{ rpm}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $P_{u} = P_{cons} \cdot \eta$; $\omega = N \cdot (2\pi/60)$; $M_u = P_{u} / \omega$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. $P_{u} = 4000 \cdot 0.85 = 3400 \text{ W}$</p>
+                        <p>2. $\omega = 1200 \cdot (2\pi/60) = 125.66 \text{ rad/s}$</p>
+                        <p>3. $M_u = 3400 / 125.66 = 27.06 \text{ N·m}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 27.1 N·m</p>
+                    </div>
+                </div>
+
+                 <div class="solution-box">
+                    <p class="font-semibold text-slate-700">F2. Una bomba amb rendiment del 70% consumeix 5 kW per elevar aigua a una altura de 25 m. Quina potència útil ($P_u$) s'aprofita per moure l'aigua?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                         <p><strong class="font-medium text-slate-600">Dades:</strong> $\eta=0.70$, $P_{cons}=5000 \text{ W}$, $h=25 \text{ m}$</p>
+                         <p><strong class="font-medium text-slate-600">Fórmula:</strong> $P_{u} = P_{cons} \cdot \eta$</p>
+                         <p><strong class="font-medium text-slate-600">Càlcul:</strong> $P_{u} = 5000 \cdot 0.70 = 3500 \text{ W}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 3500 W (o 3.5 kW)</p>
+                    </div>
+                </div>
+
+                 <div class="solution-box">
+                    <p class="font-semibold text-slate-700">F3. Un motor proporciona un parell útil ($M_u$) de 15 N·m quan gira a 900 rpm. Si el seu rendiment és del 80%, quina potència elèctrica ($P_{cons}$) consumeix?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $M_{u}=15 \text{ N·m}$, $N=900 \text{ rpm}$, $\eta=0.80$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $\omega = N \cdot (2\pi/60)$; $P_{u} = M_{u} \cdot \omega$; $P_{cons} = P_{u} / \eta$</p>
+                         <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                         <p>1. $\omega = 900 \cdot (2\pi/60) = 94.25 \text{ rad/s}$</p>
+                         <p>2. $P_{u} = 15 \cdot 94.25 = 1413.75 \text{ W}$</p>
+                         <p>3. $P_{cons} = 1413.75 / 0.80 = 1767.2 \text{ W}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 1767 W (o 1.77 kW)</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">F4. Un cabrestant ha d'aixecar 400 kg a 0.8 m/s. El tambor té un radi de 12 cm. El rendiment total és del 75%. Quin parell motor ($M_{tam}$) es necessita a l'eix del tambor i quina potència ($P_{cons}$) consumeix el sistema?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $m=400 \text{ kg}$, $v=0.8 \text{ m/s}$, $r=0.12 \text{ m}$, $\eta=0.75$</p>
+                        <p><strong class="font-medium text-slate-600">Part 1: Parell al tambor</strong></p>
+                        <p>1. Força (Pes): $F = mg = 400 \cdot 9.8 = 3920 \text{ N}$</p>
+                        <p>2. Parell útil necessari al tambor: $M_{tam} = F \cdot r = 3920 \cdot 0.12 = 470.4 \text{ N·m}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (Parell): 470.4 N·m</p>
+                        <p class="mt-4"><strong class="font-medium text-slate-600">Part 2: Potència consumida</strong></p>
+                        <p>1. Potència útil: $P_{u} = F \cdot v = 3920 \cdot 0.8 = 3136 \text{ W}$</p>
+                        <p>2. Potència consumida: $P_{cons} = P_{u} / \eta = 3136 / 0.75 = 4181.3 \text{ W}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (Potència): 4.18 kW</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">F5. Un ventilador requereix un parell de 5 N·m per girar a 1500 rpm. Si el motor que l'acciona té $\eta=85\%$, quina potència elèctrica ($P_{cons}$) consumeix?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $M_{fan}=5 \text{ N·m}$, $N=1500 \text{ rpm}$, $\eta_{mot}=0.85$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $P_{u} = M_{fan} \cdot \omega$; $P_{cons} = P_{u} / \eta_{mot}$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. $\omega = 1500 \cdot (2\pi/60) = 157.08 \text{ rad/s}$</p>
+                        <p>2. $P_{u} = 5 \cdot 157.08 = 785.4 \text{ W}$</p>
+                        <p>3. $P_{cons} = 785.4 / 0.85 = 924 \text{ W}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 924 W</p>
+                    </div>
+                </div>
+
+                 <div class="solution-box">
+                    <p class="font-semibold text-slate-700">F6. Volem elevar 250 kg a 10 m en 20 s amb un sistema motor ($\eta=70\%$) i tambor ($r=15$ cm). Calcula la potència consumida ($P_{cons}$) pel motor i la velocitat angular ($\omega_{tam}$) del tambor.</p>
+                     <div class="mt-4 text-sm space-y-2">
+                         <p><strong class="font-medium text-slate-600">Dades:</strong> $m=250 \text{ kg}$, $h=10 \text{ m}$, $t=20 \text{ s}$, $\eta=0.70$, $r=0.15 \text{ m}$</p>
+                         <p><strong class="font-medium text-slate-600">Fórmules:</strong> $v = h/t$; $P_{u} = F \cdot v = (mg) \cdot v$; $P_{cons} = P_{u} / \eta$; $\omega = v/r$</p>
+                         <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                         <p>1. Velocitat lineal: $v = 10 / 20 = 0.5 \text{ m/s}$</p>
+                         <p>2. Força (Pes): $F = 250 \cdot 9.8 = 2450 \text{ N}$</p>
+                         <p>3. Potència útil: $P_{u} = 2450 \cdot 0.5 = 1225 \text{ W}$</p>
+                         <p>4. Potència consumida: $P_{cons} = 1225 / 0.70 = 1750 \text{ W}$</p>
+                         <p>5. Velocitat angular tambor: $\omega = 0.5 / 0.15 = 3.33 \text{ rad/s}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: $P_{cons} = 1750 \text{ W}$, $\omega_{tam} = 3.33 \text{ rad/s}$</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">F7. Un motor gira a 2000 rpm i proporciona 10 N·m. Es connecta a un reductor amb rendiment del 90%. Quin treball útil ($W_{sor}$) fa la sortida del reductor si funciona durant 1 minut?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $N_{ent}=2000 \text{ rpm}$, $M_{ent}=10 \text{ N·m}$, $\eta=0.90$, $t=60 \text{ s}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $P_{ent} = M_{ent} \cdot \omega_{ent}$; $P_{sor} = P_{ent} \cdot \eta$; $W_{sor} = P_{sor} \cdot t$</p>
+                         <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                         <p>1. $\omega_{ent} = 2000 \cdot (2\pi/60) = 209.44 \text{ rad/s}$</p>
+                         <p>2. $P_{ent} = 10 \cdot 209.44 = 2094.4 \text{ W}$</p>
+                         <p>3. $P_{sor} = 2094.4 \cdot 0.90 = 1884.96 \text{ W}$ (Potència útil sortida)</p>
+                         <p>4. $W_{sor} = 1884.96 \text{ W} \cdot 60 \text{ s} = 113097.6 \text{ J}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 113.1 kJ</p>
+                    </div>
+                </div>
+
+                 <div class="solution-box">
+                    <p class="font-semibold text-slate-700">F8. Una màquina té pèrdues de potència constants de 300 W. Si ha de realitzar un treball útil de 1500 W, quina potència ($P_{ent}$) ha de rebre a l'entrada?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                         <p><strong class="font-medium text-slate-600">Dades:</strong> $P_{perduda}=300 \text{ W}$, $P_{u}=1500 \text{ W}$</p>
+                         <p><strong class="font-medium text-slate-600">Fórmula:</strong> $P_{ent} = P_{u} + P_{perduda}$</p>
+                         <p><strong class="font-medium text-slate-600">Càlcul:</strong> $P_{ent} = 1500 + 300 = 1800 \text{ W}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 1800 W</p>
+                    </div>
+                </div>
+
+                 <div class="solution-box">
+                    <p class="font-semibold text-slate-700">F9. Un sistema motor consumeix 2.5 kW i produeix 2 kW de potència útil. Quanta energia ($E_{perduda}$) es perd en forma de calor en 1 hora?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $P_{cons}=2.5 \text{ kW}$, $P_{u}=2.0 \text{ kW}$, $t=1 \text{ h}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $P_{perduda} = P_{cons} - P_{u}$; $E_{perduda} = P_{perduda} \cdot t$</p>
+                         <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                         <p>1. $P_{perduda} = 2.5 - 2.0 = 0.5 \text{ kW}$</p>
+                         <p>2. $E_{perduda} = 0.5 \text{ kW} \cdot 1 \text{ h} = 0.5 \text{ kWh}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 0.5 kWh</p>
+                    </div>
+                </div>
+
+                 <div class="solution-box">
+                    <p class="font-semibold text-slate-700">F10. Per mantenir un eix girant a 50 rad/s contra un parell resistent de 12 N·m, quina potència útil ($P_u$) es necessita? Si el motor que l'acciona té $\eta=80\%$, quina potència ($P_{cons}$) consumeix?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                         <p><strong class="font-medium text-slate-600">Dades:</strong> $\omega=50 \text{ rad/s}$, $M_{res}=12 \text{ N·m}$, $\eta=0.80$</p>
+                         <p><strong class="font-medium text-slate-600">Fórmules:</strong> $P_{u} = M_{res} \cdot \omega$; $P_{cons} = P_{u} / \eta$</p>
+                         <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                         <p>1. $P_{u} = 12 \cdot 50 = 600 \text{ W}$</p>
+                         <p>2. $P_{cons} = 600 / 0.80 = 750 \text{ W}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: $P_{u}=600 W$, $P_{cons}=750 W$</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">F11. Un motor realitza un treball de 5000 J consumint una energia de 6000 J. Quin és el seu rendiment ($\eta$)?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $W_{u}=5000 \text{ J}$, $E_{cons}=6000 \text{ J}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $\eta = W_{u} / E_{cons}$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong> $\eta = 5000 / 6000 = 0.833$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 83.3%</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">F12. Un sistema motor-reductor consumeix 1200 W per proporcionar un parell de 150 N·m a 60 rpm. Calcula el rendiment ($\eta$) global del sistema.</p>
+                     <div class="mt-4 text-sm space-y-2">
+                         <p><strong class="font-medium text-slate-600">Dades:</strong> $P_{cons}=1200 \text{ W}$, $M_{sor}=150 \text{ N·m}$, $N_{sor}=60 \text{ rpm}$</p>
+                         <p><strong class="font-medium text-slate-600">Fórmules:</strong> $P_{u} = M_{sor} \cdot \omega_{sor}$; $\eta = P_{u} / P_{cons}$</p>
+                         <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                         <p>1. Velocitat angular sortida: $\omega_{sor} = 60 \cdot (2\pi/60) = 6.28 \text{ rad/s}$</p>
+                         <p>2. Potència útil: $P_{u} = 150 \cdot 6.28 = 942 \text{ W}$</p>
+                         <p>3. Rendiment: $\eta = 942 / 1200 = 0.785$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 78.5%</p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer class="text-center mt-16 py-4 border-t border-slate-200 text-sm text-slate-500 space-y-2">
+            <p>&copy; 2025 Vicent Cardona. Departament de Tecnologia. IES Quartó de Portmany</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                // Correct delimiters for KaTeX
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
