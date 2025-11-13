@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemes de Mecanismes (Solucionats) - UP1</title>
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" xintegrity="sha384-n8MVd4RsNIU0KOVEMMZMSchEorqbvhFcuOxgnTryKaVkucguuTMMsPiiCpo1gUWV" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" xintegrity="sha384-XjKyOOlVwcpaNlchBOmLAfUGrXOdGbSMMCQH2W1CsRHBgoLhecGe4hSdcMAy5Nb2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" xintegrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .katex-display {
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 0.5rem 0;
+            font-size: 1.1em; 
+        }
+         .katex {
+             font-size: 1.1em;
+        }
+        .solution-box {
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #4ade80; /* Green accent */
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+
+        <!-- Header -->
+        <header class="bg-green-700 text-white p-6 rounded-xl shadow-lg mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold">Problemes de Mecanismes (Solucionats)</h1>
+            <p class="mt-2 text-green-200">Enfocament en Transmissions i Síntesi de Sistemes (Unitat 1).</p>
+        </header>
+        
+        <!-- Navigation Buttons -->
+        <div class="mb-8 flex space-x-4">
+            <a href="index.html" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">&larr; Tornar a l'inici</a>
+            <a href="up1_sintesi_final_solucions.html" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">Veure Problemes Síntesi Anteriors &rarr;</a>
+        </div>
+
+        <main class="bg-white p-6 sm:p-8 rounded-lg shadow-md space-y-10">
+
+            <section>
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Problemes Resolts de Mecanismes</h2>
+                
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M1 (Palanca). Volem aixecar 50 kg amb una palanca. El braç de potència ($d_p$) és de 1.5 m i el braç de resistència ($d_r$) és de 0.3 m. Si el rendiment ($\eta$) és del 90%, quina força ($F_p$) hem d'aplicar?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $m=50 \text{ kg}$, $d_p=1.5 \text{ m}$, $d_r=0.3 \text{ m}$, $\eta=0.90$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $F_R = mg$; $AM_i = d_p/d_r$; $AM_r = AM_i \cdot \eta$; $F_p = F_R / AM_r$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Força Resistència: $F_R = 50 \cdot 9.8 = 490 \text{ N}$</p>
+                        <p>2. Avantatge Mecànic Ideal: $AM_i = 1.5 / 0.3 = 5$</p>
+                        <p>3. Avantatge Mecànic Real: $AM_r = 5 \cdot 0.90 = 4.5$</p>
+                        <p>4. Força Potència: $F_p = 490 / 4.5 = 108.9 \text{ N}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 108.9 N</p>
+                    </div>
+                </div>
+
+                 <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M2 (Polispast). Un polispast amb 3 politges mòbils i $\eta=85\%$ és accionat per una força de 200 N. Quina massa màxima ($m$) pot aixecar?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $n=3$, $\eta=0.85$, $F_p=200 \text{ N}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $AM_i = n$; $AM_r = AM_i \cdot \eta$; $F_R = F_p \cdot AM_r$; $m = F_R / g$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Avantatge Mecànic Ideal: $AM_i = 3$</p>
+                        <p>2. Avantatge Mecànic Real: $AM_r = 3 \cdot 0.85 = 2.55$</p>
+                        <p>3. Força Resistència (Pes): $F_R = 200 \cdot 2.55 = 510 \text{ N}$</p>
+                        <p>4. Massa: $m = 510 / 9.8 = 52.04 \text{ kg}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 52.04 kg</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M3 (Rodes de Fricció). Una roda motriu de $D_1=8$ cm gira a 2000 rpm i transmet el moviment a una roda $D_2=20$ cm. Si el rendiment és $\eta=95\%$ i el parell motor a l'entrada ($M_1$) és de 10 N·m, calcula la velocitat ($N_2$) i el parell ($M_2$) a la sortida.</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $D_1=8 \text{ cm}$, $D_2=20 \text{ cm}$, $N_1=2000 \text{ rpm}$, $M_1=10 \text{ N·m}$, $\eta=0.95$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $i = D_2/D_1$; $N_2 = N_1 / i$; $M_2 = M_1 \cdot i \cdot \eta$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Relació Transmissió: $i = 20 / 8 = 2.5$ (És un reductor)</p>
+                        <p>2. Velocitat Sortida: $N_2 = 2000 / 2.5 = 800 \text{ rpm}$</p>
+                        <p>3. Parell Sortida: $M_2 = 10 \cdot 2.5 \cdot 0.95 = 23.75 \text{ N·m}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: $N_2 = 800 \text{ rpm}$, $M_2 = 23.75 \text{ N·m}$</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M4 (Corretja i Tambor). Un motor de 1.5 kW gira a 1000 rpm. Té una politja de $D_1=10$ cm que mou una politja $D_2=50$ cm. Aquesta segona politja està unida a un tambor de $r=15$ cm. El rendiment del motor és $\eta_{mot}=90\%$ i el de la transmissió és $\eta_{trans}=95\%$. Calcula la massa màxima que pot aixecar el tambor.</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $P_{cons}=1500 \text{ W}$, $N_1=1000 \text{ rpm}$, $D_1=0.1 \text{ m}$, $D_2=0.5 \text{ m}$, $r_{tam}=0.15 \text{ m}$, $\eta_{mot}=0.90$, $\eta_{trans}=0.95$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $i = D_2/D_1$; $\omega_2 = (N_1/i) \cdot (2\pi/60)$; $P_u = P_{cons} \cdot \eta_{mot} \cdot \eta_{trans}$; $P_u = F \cdot v = F \cdot (\omega_2 \cdot r_{tam})$; $F = m \cdot g$</p>
+                        <p><strong class="font-medium text-slate-600">Mètode per Potència (recomanat):</strong></p>
+                        <p>1. Potència útil final (al tambor): $P_u = 1500 \cdot 0.90 \cdot 0.95 = 1282.5 \text{ W}$</p>
+                        <p>2. Relació Transmissió: $i = 0.5 / 0.1 = 5$</p>
+                        <p>3. Velocitat tambor (rpm): $N_2 = N_1 / i = 1000 / 5 = 200 \text{ rpm}$</p>
+                        <p>4. Velocitat angular tambor: $\omega_2 = 200 \cdot (2\pi/60) = 20.94 \text{ rad/s}$</p>
+                        <p>5. Velocitat lineal càrrega: $v = \omega_2 \cdot r_{tam} = 20.94 \cdot 0.15 = 3.14 \text{ m/s}$</p>
+                        <p>6. Força màxima: $F = P_u / v = 1282.5 / 3.14 = 408.4 \text{ N}$</p>
+                        <p>7. Massa: $m = F / g = 408.4 / 9.8 = 41.67 \text{ kg}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 41.67 kg</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M5 (Engranatges). Un motor subministra 500 W a 3000 rpm. Es connecta a un reductor $i=20$ amb $\eta=85\%$. Quina força pot exercir una politja de 15 cm de diàmetre acoblada a la sortida?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $P_{ent}=500 \text{ W}$, $N_{ent}=3000 \text{ rpm}$, $i=20$, $\eta=0.85$, $D_{pol}=0.15 \text{ m}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $M_{ent} = P_{ent} / \omega_{ent}$; $M_{sor} = M_{ent} \cdot i \cdot \eta$; $F = M_{sor} / r_{pol}$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Velocitat entrada (rad/s): $\omega_{ent} = 3000 \cdot (2\pi/60) = 314.16 \text{ rad/s}$</p>
+                        <p>2. Parell entrada: $M_{ent} = 500 / 314.16 = 1.59 \text{ N·m}$</p>
+                        <p>3. Parell sortida: $M_{sor} = 1.59 \cdot 20 \cdot 0.85 = 27.03 \text{ N·m}$</p>
+                        <p>4. Radi politja: $r_{pol} = 0.15 / 2 = 0.075 \text{ m}$</p>
+                        <p>5. Força: $F = 27.03 / 0.075 = 360.4 \text{ N}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 360.4 N</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M6 (Cadena). La roda d'una bicicleta té $D=68$ cm. El ciclista pedala a 90 rpm. El plat té $Z_1=50$ dents i el pinyó $Z_2=20$ dents. Quina és la velocitat de la bicicleta en km/h? (Assumeix $\eta=100\%$).</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $D_{roda}=0.68 \text{ m}$, $N_{pedal}=90 \text{ rpm}$, $Z_1=50$, $Z_2=20$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $i = Z_2/Z_1$; $N_{roda} = N_{pedal} / i$; $\omega_{roda} = N_{roda} \cdot (2\pi/60)$; $v = \omega_{roda} \cdot r_{roda}$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Relació Transmissió: $i = 20 / 50 = 0.4$ (És un multiplicador)</p>
+                        <p>2. Velocitat roda (rpm): $N_{roda} = 90 / 0.4 = 225 \text{ rpm}$</p>
+                        <p>3. Velocitat roda (rad/s): $\omega_{roda} = 225 \cdot (2\pi/60) = 23.56 \text{ rad/s}$</p>
+                        <p>4. Radi roda: $r_{roda} = 0.68 / 2 = 0.34 \text{ m}$</p>
+                        <p>5. Velocitat lineal (m/s): $v = 23.56 \cdot 0.34 = 8.01 \text{ m/s}$</p>
+                        <p>6. Velocitat (km/h): $v = 8.01 \cdot 3.6 = 28.84 \text{ km/h}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 28.8 km/h</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M7 (Tren Engranatges). Un motor gira a 3000 rpm amb $M_1=10$ N·m. 1a etapa: $Z_1=20, Z_2=60$ ($\eta_1=95\%$). 2a etapa: $Z_3=25, Z_4=75$ ($\eta_2=95\%$). Calcula $N_{final}$ i $M_{final}$.</p>
+                    <div class="mt-4 text-sm space-y-2">
+                         <p><strong class="font-medium text-slate-600">Dades:</strong> $N_1=3000 \text{ rpm}$, $M_1=10 \text{ N·m}$, $Z_1=20, Z_2=60, Z_3=25, Z_4=75$, $\eta_1=0.95, \eta_2=0.95$</p>
+                         <p><strong class="font-medium text-slate-600">Fórmules:</strong> $i_{tot} = (Z_2/Z_1) \cdot (Z_4/Z_3)$; $\eta_{tot} = \eta_1 \cdot \eta_2$; $N_{final} = N_1 / i_{tot}$; $M_{final} = M_1 \cdot i_{tot} \cdot \eta_{tot}$</p>
+                         <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                         <p>1. $i_1 = 60/20 = 3$; $i_2 = 75/25 = 3$</p>
+                         <p>2. $i_{tot} = 3 \cdot 3 = 9$</p>
+                         <p>3. $\eta_{tot} = 0.95 \cdot 0.95 = 0.9025$</p>
+                         <p>4. $N_{final} = 3000 / 9 = 333.3 \text{ rpm}$</p>
+                         <p>5. $M_{final} = 10 \cdot 9 \cdot 0.9025 = 81.225 \text{ N·m}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: $N_{final} = 333.3 \text{ rpm}$, $M_{final} = 81.2 \text{ N·m}$</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M8 (Engranatges + Potència). Un reductor $i=10$ rep 5kW a l'eix d'entrada i entrega 4.5kW a la sortida. Quin és el rendiment ($\eta$)? Si el parell d'entrada $M_1=50$ N·m, quina és la velocitat d'entrada $N_1$?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                         <p><strong class="font-medium text-slate-600">Dades:</strong> $i=10$, $P_{ent}=5000 \text{ W}$, $P_{sor}=4500 \text{ W}$, $M_1=50 \text{ N·m}$</p>
+                         <p><strong class="font-medium text-slate-600">Part 1: Rendiment</strong></p>
+                         <p>$\eta = P_{sor} / P_{ent} = 4500 / 5000 = 0.9$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat ($\eta$): 90%</p>
+                         <p class="mt-4"><strong class="font-medium text-slate-600">Part 2: Velocitat d'entrada</strong></p>
+                         <p>$P_{ent} = M_1 \cdot \omega_1 \implies \omega_1 = P_{ent} / M_1 = 5000 / 50 = 100 \text{ rad/s}$</p>
+                         <p>$N_1 = \omega_1 \cdot (60/2\pi) = 100 \cdot 9.55 = 955 \text{ rpm}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat ($N_1$): 955 rpm</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M9 (Corretja + Energia). Un motor de 800W ($\eta=90\%$) acciona un reductor per corretja $i=4$ ($\eta=85\%$) durant 30 segons. Quin treball útil ($W_{sor}$) s'ha realitzat a la sortida?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $P_{cons}=800 \text{ W}$, $\eta_{mot}=0.90$, $i=4$, $\eta_{red}=0.85$, $t=30 \text{ s}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $P_{u} = P_{cons} \cdot \eta_{mot} \cdot \eta_{red}$; $W_u = P_u \cdot t$</p>
+                         <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                         <p>1. Potència útil final: $P_u = 800 \cdot 0.90 \cdot 0.85 = 612 \text{ W}$</p>
+                         <p>2. Treball útil final: $W_u = 612 \text{ W} \cdot 30 \text{ s} = 18360 \text{ J}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 18.36 kJ</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M10 (Engranatges + Tambor). Un motor subministra 8 kW a 1000 rpm a un reductor $i=15$ ($\eta=88\%$). A la sortida hi ha un tambor de 30 cm de radi. Quina massa pot aixecar a velocitat constant?</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $P_{ent}=8000 \text{ W}$, $N_{ent}=1000 \text{ rpm}$, $i=15$, $\eta=0.88$, $r_{tam}=0.3 \text{ m}$</p>
+                        <p><strong class="font-medium text-slate-600">Mètode 1: Potència i Velocitat</strong></p>
+                        <p>1. $P_u = P_{ent} \cdot \eta = 8000 \cdot 0.88 = 7040 \text{ W}$</p>
+                        <p>2. $N_{sor} = N_{ent} / i = 1000 / 15 = 66.67 \text{ rpm}$</p>
+                        <p>3. $\omega_{sor} = 66.67 \cdot (2\pi/60) = 6.98 \text{ rad/s}$</p>
+                        <p>4. $v = \omega_{sor} \cdot r_{tam} = 6.98 \cdot 0.3 = 2.09 \text{ m/s}$</p>
+                        <p>5. $F = P_u / v = 7040 / 2.09 = 3368 \text{ N}$</p>
+                        <p>6. $m = F / g = 3368 / 9.8 = 343.7 \text{ kg}$</p>
+                        <p><strong class="font-medium text-slate-600">Mètode 2: Parells</strong></p>
+                        <p>1. $\omega_{ent} = 1000 \cdot (2\pi/60) = 104.72 \text{ rad/s}$</p>
+                        <p>2. $M_{ent} = P_{ent} / \omega_{ent} = 8000 / 104.72 = 76.39 \text{ N·m}$</p>
+                        <p>3. $M_{sor} = M_{ent} \cdot i \cdot \eta = 76.39 \cdot 15 \cdot 0.88 = 1008.3 \text{ N·m}$</p>
+                        <p>4. $F = M_{sor} / r_{tam} = 1008.3 / 0.3 = 3361 \text{ N}$</p>
+                        <p>5. $m = F / g = 3361 / 9.8 = 342.9 \text{ kg}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 343 kg</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M11 (Pinyó-Cremallera). Un motor gira a 120 rpm i proporciona 10 N·m. Acciona un reductor $i=5$ ($\eta_{red}=90\%$) connectat a un pinyó de $Z=20$ dents i mòdul $m=3$ mm. El rendiment del pinyó-cremallera és $\eta_{pc}=75\%$. Calcula la Força ($F$) i la velocitat ($v$) de la cremallera.</p>
+                     <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $N_m=120 \text{ rpm}$, $M_m=10 \text{ N·m}$, $i=5$, $\eta_{red}=0.90$, $Z=20$, $m=0.003 \text{ m}$, $\eta_{pc}=0.75$</p>
+                        <p><strong class="font-medium text-slate-600">Part 1: Velocitat (Cinemàtica)</strong></p>
+                        <p>1. Velocitat pinyó: $N_{pin} = N_m / i = 120 / 5 = 24 \text{ rpm}$</p>
+                        <p>2. Avanç per volta: $L = \pi \cdot m \cdot Z = \pi \cdot 0.003 \cdot 20 = 0.1885 \text{ m/volta}$</p>
+                        <p>3. Velocitat cremallera (m/s): $v = N_{pin(rps)} \cdot L = (24/60) \cdot 0.1885 = 0.0754 \text{ m/s}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (Velocitat): 0.075 m/s (o 7.5 cm/s)</p>
+                        <p class="mt-4"><strong class="font-medium text-slate-600">Part 2: Força (Dinàmica)</strong></p>
+                        <p>1. Potència motor: $P_m = M_m \cdot \omega_m = 10 \cdot (120 \cdot 2\pi/60) = 125.7 \text{ W}$</p>
+                        <p>2. Potència útil final (cremallera): $P_u = P_m \cdot \eta_{red} \cdot \eta_{pc} = 125.7 \cdot 0.90 \cdot 0.75 = 84.8 \text{ W}$</p>
+                        <p>3. Força cremallera: $F = P_u / v = 84.8 / 0.0754 = 1125 \text{ N}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat (Força): 1125 N</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M12 (Cargol-Femella). Es vol aixecar 1.5 tones (1500 kg) amb un sistema cargol-femella de pas $p=4$ mm. El rendiment és $\eta=35\%$. Quin parell motor ($M$) cal aplicar al cargol?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $m=1500 \text{ kg}$, $p=0.004 \text{ m/volta}$, $\eta=0.35$</p>
+                        <p><strong class="font-medium text-slate-600">Raonament:</strong> Igualem el treball d'entrada i sortida per 1 volta, aplicant el rendiment.</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $W_u = F_R \cdot p$; $W_{ent} = M \cdot 2\pi$; $\eta = W_u / W_{ent}$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Força Resistència: $F_R = 1500 \cdot 9.8 = 14700 \text{ N}$</p>
+                        <p>2. Treball útil (per 1 volta): $W_u = 14700 \cdot 0.004 = 58.8 \text{ J}$</p>
+                        <p>3. Treball entrada (per 1 volta): $W_{ent} = W_u / \eta = 58.8 / 0.35 = 168 \text{ J}$</p>
+                        <p>4. Parell motor: $M = W_{ent} / (2\pi) = 168 / 6.283 = 26.74 \text{ N·m}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 26.7 N·m</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M13 (Energia Cinètica + Potencial). Un ascensor de 800 kg (càrrega inclosa) puja des del repòs i assoleix 2 m/s quan ha pujat 5 metres. Si les pèrdues totals són 15000 J, quin treball ha fet el motor?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $m=800 \text{ kg}$, $v_i=0$, $v_f=2 \text{ m/s}$, $h=5 \text{ m}$, $W_{perdut}=15000 \text{ J}$</p>
+                        <p><strong class="font-medium text-slate-600">Raonament:</strong> El treball del motor es converteix en $\Delta E_c$, $\Delta E_p$ i pèrdues.</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $W_{motor} = \Delta E_c + \Delta E_p + W_{perdut}$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. $\Delta E_c = \frac{1}{2}mv_f^2 = 0.5 \cdot 800 \cdot (2)^2 = 1600 \text{ J}$</p>
+                        <p>2. $\Delta E_p = mgh = 800 \cdot 9.8 \cdot 5 = 39200 \text{ J}$</p>
+                        <p>3. $W_{motor} = 1600 + 39200 + 15000 = 55800 \text{ J}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 55.8 kJ</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M14 (Potència vs Energia). Un motor consumeix 2 kW. Un altre motor consumeix 0.5 kWh en 15 minuts. Quin dels dos consumeix més potència?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $P_A = 2 \text{ kW}$. $E_B = 0.5 \text{ kWh}$ en $t_B = 15 \text{ min}$.</p>
+                        <p><strong class="font-medium text-slate-600">Fórmula:</strong> $P = E / t$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Convertim temps B a hores: $t_B = 15 \text{ min} = 0.25 \text{ h}$</p>
+                        <p>2. Calculem Potència B: $P_B = E_B / t_B = 0.5 \text{ kWh} / 0.25 \text{ h} = 2 \text{ kW}$</p>
+                        <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: Tots dos consumeixen la mateixa potència (2 kW).</p>
+                    </div>
+                </div>
+
+                <div class="solution-box">
+                    <p class="font-semibold text-slate-700">M15 (Treball i Potència Rotacional). Un motor aplica un parell constant de 25 N·m per accelerar un disc des del repòs. Després de 5 segons, el disc ha girat 100 radians. Quin treball ha fet el motor i quina és la potència mitjana?</p>
+                    <div class="mt-4 text-sm space-y-2">
+                        <p><strong class="font-medium text-slate-600">Dades:</strong> $M=25 \text{ N·m}$, $t=5 \text{ s}$, $\theta=100 \text{ rad}$</p>
+                        <p><strong class="font-medium text-slate-600">Fórmules:</strong> $W = M \cdot \theta$; $P_{mitja} = W / t$</p>
+                        <p><strong class="font-medium text-slate-600">Càlcul:</strong></p>
+                        <p>1. Treball: $W = 25 \cdot 100 = 2500 \text{ J}$</p>
+                        <p>2. Potència mitjana: $P_{mitja} = 2500 / 5 = 500 \text{ W}$</p>
+                         <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: $W=2500 J$, $P_{mitja}=500 W$</p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer class="text-center mt-16 py-4 border-t border-slate-200 text-sm text-slate-500 space-y-2">
+            <p>&copy; 2025 Vicent Cardona. Departament de Tecnologia. IES Quartó de Portmany</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                // Correct delimiters for KaTeX
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
