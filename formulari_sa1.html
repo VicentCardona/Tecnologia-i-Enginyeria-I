@@ -166,11 +166,11 @@
                     </div>
 
                     <div class="formula-box">
-                        <h4>Transmissió Circular</h4>
+                        <h4>Transmissió Circular (Convenció: $i = \frac{\text{conductora}}{\text{conduïda}}$)</h4>
                         <p><strong>Rel. de Transmissió ($i$):</strong></p>
-                        $$ i = \frac{\omega_{ent}}{\omega_{sor}} = \frac{N_{ent}}{N_{sor}} $$
-                        <p><strong>Politges (Diàmetres):</strong> $i = \frac{D_{sortida}}{D_{entrada}}$</p>
-                        <p><strong>Engranatges (Dents):</strong> $i = \frac{Z_{sortida}}{Z_{entrada}}$</p>
+                        $$ i = \frac{\omega_{sor}}{\omega_{ent}} = \frac{N_{sor}}{N_{ent}} $$
+                        <p><strong>Politges (Diàmetres):</strong> $i = \frac{D_{entrada}}{D_{sortida}}$</p>
+                        <p><strong>Engranatges (Dents):</strong> $i = \frac{Z_{entrada}}{Z_{sortida}}$</p>
                         <p><strong>Trens Compostos:</strong> $i_{total} = i_1 \cdot i_2 \cdot \dots$</p>
                     </div>
                     
@@ -179,7 +179,7 @@
                         <p><strong>Potència a la sortida:</strong></p>
                         $$ P_{sortida} = P_{entrada} \cdot \eta $$
                         <p><strong>Parell a la sortida (Fórmula Clau):</strong></p>
-                        $$ M_{sortida} = M_{entrada} \cdot i \cdot \eta $$
+                        $$ M_{sortida} = M_{entrada} \cdot \frac{1}{i} \cdot \eta $$
                     </div>
                     
                      <div class="formula-box">
@@ -217,4 +217,3 @@
     </script>
 </body>
 </html>
-
