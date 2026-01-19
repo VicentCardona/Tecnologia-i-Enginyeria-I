@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemes Circuits Resolts - Tecnologia i Enginyeria</title>
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" xintegrity="sha384-n8MVd4RsNIU0KOVEMMZMSchEorqbvhFcuOxgnTryKaVkucguuTMMsPiiCpo1gUWV" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" xintegrity="sha384-XjKyOOlVwcpaNlchBOmLAfUGrXOdGbSMMCQH2W1CsRHBgoLhecGe4hSdcMAy5Nb2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" xintegrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .katex-display {
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 0.5rem 0;
+            font-size: 1.1em; 
+        }
+         .katex {
+             font-size: 1.05em;
+        }
+        .solution-box {
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #4ade80; /* Green accent */
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            background-color: #f8fafc;
+            display: none; /* Hidden by default */
+        }
+        .circuit-diagram {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+        }
+        /* SVG Styles */
+        .svg-wire { stroke: #334155; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+        .svg-text { font-family: 'Inter', sans-serif; font-size: 12px; fill: #ef4444; font-weight: 600; }
+        .svg-label { font-family: 'Inter', sans-serif; font-size: 12px; fill: #1e40af; font-weight: 600; }
+        .svg-arrow { stroke: #16a34a; stroke-width: 2; marker-end: url(#arrowhead); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- SVG Definitions -->
+    <svg style="display: none;">
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#16a34a" />
+            </marker>
+        </defs>
+    </svg>
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+
+        <!-- Header -->
+        <header class="bg-green-700 text-white p-6 rounded-xl shadow-lg mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold">Problemes de Circuits Resolts</h1>
+            <p class="mt-2 text-green-200">Associació Mixta, Potència i Lleis de Kirchhoff.</p>
+        </header>
+        
+        <!-- Navigation Buttons -->
+        <div class="mb-8 flex space-x-4">
+            <button onclick="window.print()" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors flex items-center">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                Imprimir Document
+            </button>
+        </div>
+
+        <main class="bg-white p-6 sm:p-8 rounded-lg shadow-md space-y-10">
+
+            <section>
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Bloc 1: Associació Mixta i Llei d'Ohm</h2>
+                
+                <!-- PROBLEMA 1 -->
+                <div class="mb-10">
+                    <p class="font-semibold text-slate-700 text-lg">1. Circuit Mixt Clàssic</p>
+                    <p class="mt-2 text-slate-600">Donat el següent circuit amb $V_T = 24V$ i resistències $R_1=4\Omega$, $R_2=12\Omega$, $R_3=6\Omega$, $R_4=4\Omega$ i $R_5=5\Omega$, calcula:</p>
+                    <ul class="list-disc list-inside mt-1 text-slate-600 text-sm">
+                        <li>Resistència Equivalent ($R_{eq}$).</li>
+                        <li>Intensitat Total ($I_T$).</li>
+                        <li>Tensió al bloc paral·lel ($V_p$).</li>
+                        <li>Corrents parcials per $R_2$ i $R_3$.</li>
+                    </ul>
+                    
+                    <div class="circuit-diagram">
+                        <svg width="400" height="150" viewBox="0 0 400 150">
+                            <!-- Wires -->
+                            <polyline points="50,120 50,30 130,30" class="svg-wire"/>
+                            <polyline points="230,30 250,30 250,120 50,120" class="svg-wire"/>
+                            <!-- Parallel Box -->
+                            <polyline points="130,30 150,30 150,10 170,10" class="svg-wire"/> <!-- Top branch -->
+                            <polyline points="210,10 230,10 230,30" class="svg-wire"/>
+                            <polyline points="130,30 150,30 150,50 170,50" class="svg-wire"/> <!-- Bottom branch -->
+                            <polyline points="210,50 230,50 230,30" class="svg-wire"/>
+                            
+                            <!-- Source -->
+                            <line x1="40" y1="75" x2="60" y2="75" stroke="black" stroke-width="2"/> <!-- Short -->
+                            <line x1="30" y1="65" x2="70" y2="65" stroke="black" stroke-width="2"/> <!-- Long -->
+                            <text x="10" y="75" class="svg-label">24V</text>
+
+                            <!-- Resistors -->
+                            <rect x="80" y="20" width="40" height="20" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="90" y="35" class="svg-text">4Ω</text>
+                            <text x="90" y="15" class="svg-label">R1</text>
+
+                            <rect x="170" y="0" width="40" height="20" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="180" y="15" class="svg-text">12Ω</text>
+                            <text x="180" y="-5" class="svg-label">R2</text>
+                            
+                            <rect x="170" y="40" width="40" height="20" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="180" y="55" class="svg-text">6Ω</text>
+                            <text x="180" y="75" class="svg-label">R3</text>
+
+                            <!-- R4 (Unlabelled before, now 4 Ohms) -->
+                            <rect x="240" y="45" width="20" height="40" fill="white" stroke="#334155" stroke-width="2" transform="translate(0)"/>
+                            <text x="215" y="65" class="svg-text">4Ω</text>
+                            <text x="215" y="80" class="svg-label">R4</text>
+
+                            <!-- R5 (Rightmost, now 5 Ohms) -->
+                            <polyline points="250,30 300,30 300,60" class="svg-wire"/>
+                            <polyline points="300,100 300,120 250,120" class="svg-wire"/>
+                            <rect x="290" y="60" width="20" height="40" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="315" y="85" class="svg-text">5Ω</text>
+                            <text x="315" y="65" class="svg-label">R5</text>
+
+                            <line x1="60" y1="30" x2="80" y2="30" class="svg-arrow"/>
+                            <text x="60" y="20" fill="#16a34a" font-size="12" font-weight="bold">IT</text>
+                        </svg>
+                    </div>
+
+                    <button onclick="toggleSolution('sol1', this)" class="text-green-700 font-medium hover:text-green-900 border border-green-700 px-4 py-2 rounded transition-colors">Veure Solució</button>
+                    
+                    <div id="sol1" class="solution-box">
+                        <div class="mt-2 text-sm space-y-2">
+                            <p><strong class="font-medium text-slate-600">a) Resistència Equivalent:</strong></p>
+                            <p>Paral·lel ($R_2 || R_3$): $R_{23} = \frac{12 \cdot 6}{12 + 6} = \frac{72}{18} = 4\,\Omega$</p>
+                            <p>Total (Sèrie): $R_{eq} = R_1 + R_{23} + R_4 + R_5 = 4 + 4 + 4 + 5 = 17\,\Omega$</p>
+                            <hr class="border-slate-200 my-2">
+                            <p><strong class="font-medium text-slate-600">b) Intensitat Total:</strong> $I_T = \frac{24}{17} \approx 1,41\,A$</p>
+                            <hr class="border-slate-200 my-2">
+                            <p><strong class="font-medium text-slate-600">c) Tensió Paral·lel:</strong> $V_p = I_T \cdot R_{23} = 1,41 \cdot 4 \approx 5,65\,V$</p>
+                            <hr class="border-slate-200 my-2">
+                            <p><strong class="font-medium text-slate-600">d) Corrents Parcials:</strong></p>
+                            <p>$I_2 = 5,65 / 12 \approx 0,47\,A$</p>
+                            <p>$I_3 = 5,65 / 6 \approx 0,94\,A$</p>
+                            <p class="text-xs text-gray-500 mt-1">*Nota: $0,47 + 0,94 = 1,41A$ (Coincideix amb $I_T$)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROBLEMA 2 -->
+                <div class="mb-10">
+                    <p class="font-semibold text-slate-700 text-lg">2. Potència i Dissipació</p>
+                    <p class="mt-2 text-slate-600">Circuit amb $V=100V$. Branca A ($R_1=20\Omega$). Branca B ($R_2=30\Omega$ sèrie amb $R_3=20\Omega$). Ambdues en paral·lel. Quina potència total es dissipa?</p>
+                    
+                    <div class="circuit-diagram">
+                         <svg width="300" height="150" viewBox="0 0 300 150">
+                            <!-- Rails -->
+                            <line x1="50" y1="20" x2="250" y2="20" class="svg-wire"/>
+                            <line x1="50" y1="130" x2="250" y2="130" class="svg-wire"/>
+                            <!-- Source -->
+                            <line x1="50" y1="20" x2="50" y2="60" class="svg-wire"/>
+                            <line x1="50" y1="90" x2="50" y2="130" class="svg-wire"/>
+                            <line x1="40" y1="60" x2="60" y2="60" stroke="black" stroke-width="2"/> <!-- Long -->
+                            <line x1="45" y1="90" x2="55" y2="90" stroke="black" stroke-width="2"/> <!-- Short -->
+                            <text x="10" y="80" class="svg-label">100V</text>
+                            
+                            <!-- Branch A -->
+                            <line x1="150" y1="20" x2="150" y2="130" class="svg-wire"/>
+                            <rect x="140" y="60" width="20" height="30" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="165" y="80" class="svg-text">20Ω</text>
+                            <text x="165" y="60" class="svg-label">R1</text>
+
+                            <!-- Branch B -->
+                            <line x1="250" y1="20" x2="250" y2="130" class="svg-wire"/>
+                            <rect x="240" y="40" width="20" height="30" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="265" y="60" class="svg-text">30Ω</text>
+                            <rect x="240" y="90" width="20" height="30" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="265" y="110" class="svg-text">20Ω</text>
+                        </svg>
+                    </div>
+
+                    <button onclick="toggleSolution('sol2', this)" class="text-green-700 font-medium hover:text-green-900 border border-green-700 px-4 py-2 rounded transition-colors">Veure Solució</button>
+                    
+                    <div id="sol2" class="solution-box">
+                         <div class="mt-2 text-sm space-y-2">
+                             <p><strong class="font-medium text-slate-600">Dades:</strong> $R_B = 30+20=50\Omega$, $R_A=20\Omega$</p>
+                             <p><strong class="font-medium text-slate-600">Càlcul Potència Total:</strong></p>
+                             <p>$R_{eq} = \frac{20 \cdot 50}{70} \approx 14,28\,\Omega$</p>
+                             <p>$P_T = \frac{V^2}{R_{eq}} = \frac{10000}{14,28} \approx 700\,W$</p>
+                             <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultat: 700 W. $R_1$ dissipa més (500W).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-200 pb-3 mb-6">Bloc 2: Lleis de Kirchhoff</h2>
+
+                <!-- PROBLEMA 3 -->
+                <div class="mb-10">
+                    <p class="font-semibold text-slate-700 text-lg">3. Circuit de Dues Malles</p>
+                    <p class="mt-2 text-slate-600">Calcula els corrents de branca ($I_1, I_2, I_3$).</p>
+                    
+                    <div class="circuit-diagram">
+                        <svg width="400" height="180" viewBox="0 0 400 180">
+                            <!-- Outer Frame -->
+                            <rect x="50" y="30" width="300" height="120" class="svg-wire"/>
+                            <line x1="200" y1="30" x2="200" y2="150" class="svg-wire"/>
+                            
+                            <!-- E1 (Left) -->
+                            <rect x="40" y="80" width="20" height="20" fill="white" stroke="none"/>
+                            <line x1="40" y1="85" x2="60" y2="85" stroke="black" stroke-width="2"/> <!-- Top Long -->
+                            <line x1="45" y1="95" x2="55" y2="95" stroke="black" stroke-width="2"/> <!-- Bot Short -->
+                            <text x="10" y="95" class="svg-label">10V</text>
+
+                            <!-- R1 (Left) -->
+                            <rect x="80" y="20" width="40" height="20" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="90" y="35" class="svg-text">2Ω</text>
+
+                            <!-- R2 (Center) -->
+                            <rect x="190" y="70" width="20" height="40" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="215" y="95" class="svg-text">4Ω</text>
+
+                            <!-- E2 (Right) -->
+                            <rect x="340" y="80" width="20" height="20" fill="white" stroke="none"/>
+                            <line x1="340" y1="85" x2="360" y2="85" stroke="black" stroke-width="2"/> <!-- Top Long -->
+                            <line x1="345" y1="95" x2="355" y2="95" stroke="black" stroke-width="2"/> <!-- Bot Short -->
+                            <text x="365" y="95" class="svg-label">20V</text>
+
+                            <!-- R3 (Right) -->
+                            <rect x="280" y="20" width="40" height="20" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="290" y="35" class="svg-text">2Ω</text>
+
+                            <!-- Currents -->
+                            <line x1="50" y1="50" x2="50" y2="40" class="svg-arrow"/> <text x="60" y="55" class="svg-text">I1</text>
+                            <line x1="200" y1="50" x2="200" y2="65" class="svg-arrow"/> <text x="210" y="60" class="svg-text">I2</text>
+                            <line x1="350" y1="50" x2="350" y2="40" class="svg-arrow"/> <text x="320" y="55" class="svg-text">I3</text>
+                        </svg>
+                    </div>
+
+                    <button onclick="toggleSolution('sol3', this)" class="text-green-700 font-medium hover:text-green-900 border border-green-700 px-4 py-2 rounded transition-colors">Veure Solució</button>
+                    
+                    <div id="sol3" class="solution-box">
+                        <div class="mt-2 text-sm space-y-2">
+                             <p><strong class="font-medium text-slate-600">Equacions:</strong></p>
+                             <p>1. Node: $I_1 + I_3 = I_2$</p>
+                             <p>2. Malla Esq: $10 - 2I_1 - 4I_2 = 0 \Rightarrow 5 - I_1 - 2I_2 = 0$</p>
+                             <p>3. Malla Dreta: $20 - 2I_3 - 4I_2 = 0 \Rightarrow 10 - I_3 - 2I_2 = 0$</p>
+                             <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultats: $I_1 = -1A$ (Carrega), $I_2 = 3A$, $I_3 = 4A$</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROBLEMA 4 -->
+                <div class="mb-10">
+                    <p class="font-semibold text-slate-700 text-lg">4. Circuit amb 2 Generadors (Nivell Avançat)</p>
+                    <p class="mt-2 text-slate-600">Calcula els corrents considerant que la font central està invertida ($V_2=10V$ cap avall).</p>
+                    <ul class="list-disc list-inside text-sm text-slate-500 mb-4">
+                        <li>Esq: 42V, 3Ω</li>
+                        <li>Centre: 10V (oposada), 6Ω</li>
+                        <li>Dreta: 4Ω</li>
+                    </ul>
+                    
+                    <div class="circuit-diagram">
+                        <svg width="400" height="180" viewBox="0 0 400 180">
+                            <!-- Outer Frame -->
+                            <rect x="50" y="30" width="300" height="120" class="svg-wire"/>
+                            <line x1="200" y1="30" x2="200" y2="150" class="svg-wire"/>
+                            
+                            <!-- E1 (Left - 42V) -->
+                            <rect x="40" y="80" width="20" height="20" fill="white" stroke="none"/>
+                            <line x1="40" y1="85" x2="60" y2="85" stroke="black" stroke-width="2"/> <!-- Top Long -->
+                            <line x1="45" y1="95" x2="55" y2="95" stroke="black" stroke-width="2"/> <!-- Bot Short -->
+                            <text x="10" y="95" class="svg-label">42V</text>
+                            
+                            <!-- R1 (Left - 3 Ohm) -->
+                            <rect x="80" y="20" width="40" height="20" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="90" y="35" class="svg-text">3Ω</text>
+
+                            <!-- E2 (Center - 10V INVERTED) -->
+                            <!-- Inverted means Positive (Long) at Bottom, Negative (Short) at Top -->
+                            <rect x="190" y="110" width="20" height="20" fill="white" stroke="none"/>
+                            <line x1="195" y1="115" x2="205" y2="115" stroke="black" stroke-width="2"/> <!-- Top Short (-) -->
+                            <line x1="190" y1="125" x2="210" y2="125" stroke="black" stroke-width="2"/> <!-- Bot Long (+) -->
+                            <text x="215" y="125" class="svg-label">10V</text>
+
+                            <!-- R2 (Center - 6 Ohm) -->
+                            <rect x="190" y="50" width="20" height="40" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="215" y="75" class="svg-text">6Ω</text>
+
+                            <!-- R3 (Right - 4 Ohm) -->
+                            <rect x="280" y="20" width="40" height="20" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="290" y="35" class="svg-text">4Ω</text>
+
+                            <!-- Currents -->
+                            <line x1="50" y1="50" x2="50" y2="40" class="svg-arrow"/> <text x="60" y="55" class="svg-text">I1</text>
+                            <line x1="200" y1="90" x2="200" y2="105" class="svg-arrow"/> <text x="175" y="100" class="svg-text">I2</text>
+                            <line x1="350" y1="50" x2="350" y2="65" class="svg-arrow"/> <text x="320" y="60" class="svg-text">I3</text>
+                        </svg>
+                    </div>
+
+                    <button onclick="toggleSolution('sol4', this)" class="text-green-700 font-medium hover:text-green-900 border border-green-700 px-4 py-2 rounded transition-colors">Veure Solució</button>
+                    
+                    <div id="sol4" class="solution-box">
+                        <div class="mt-2 text-sm space-y-2">
+                            <p><strong class="font-medium text-slate-600">Plantejament:</strong></p>
+                            <p>Malla 1: $42 - 3I_1 - 6I_2 - 10 = 0$ (El 10 resta perquè anem de + a -)</p>
+                            <p>Malla 2: $10 + 6I_2 - 4I_3 = 0$</p>
+                            <p>Node: $I_1 = I_2 + I_3$</p>
+                            <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultats: $I_1 \approx 7.03 A$, $I_2 \approx 1.81 A$, $I_3 \approx 5.22 A$</p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- PROBLEMA 5 (MODIFICAT - NOU KIRCHHOFF) -->
+                 <div class="mb-10">
+                    <p class="font-semibold text-slate-700 text-lg">5. Circuit de Reforç (Dues Malles Asimètriques)</p>
+                    <p class="mt-2 text-slate-600">Calcula les intensitats de branca ($I_1, I_2, I_3$) en el següent circuit. Nota que les dues fonts són de 8V però les resistències són diferents.</p>
+                    
+                     <div class="circuit-diagram">
+                        <svg width="400" height="180" viewBox="0 0 400 180">
+                            <!-- Frame -->
+                            <rect x="50" y="30" width="300" height="120" class="svg-wire"/>
+                            <line x1="200" y1="30" x2="200" y2="150" class="svg-wire"/>
+                            
+                            <!-- E1 Left (8V) -->
+                            <rect x="40" y="80" width="20" height="20" fill="white" stroke="none"/>
+                            <line x1="40" y1="85" x2="60" y2="85" stroke="black" stroke-width="2"/> <!-- Top Long (+) -->
+                            <line x1="45" y1="95" x2="55" y2="95" stroke="black" stroke-width="2"/> <!-- Bot Short (-) -->
+                            <text x="10" y="95" class="svg-label">8V</text>
+
+                            <!-- R1 Left Top (1 Ohm) -->
+                            <rect x="80" y="20" width="40" height="20" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="90" y="35" class="svg-text">1Ω</text>
+
+                            <!-- R2 Center (2 Ohm) -->
+                            <rect x="190" y="70" width="20" height="40" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="215" y="95" class="svg-text">2Ω</text>
+
+                            <!-- E2 Right (8V) -->
+                            <rect x="340" y="80" width="20" height="20" fill="white" stroke="none"/>
+                            <line x1="340" y1="85" x2="360" y2="85" stroke="black" stroke-width="2"/> <!-- Top Long (+) -->
+                            <line x1="345" y1="95" x2="355" y2="95" stroke="black" stroke-width="2"/> <!-- Bot Short (-) -->
+                            <text x="365" y="95" class="svg-label">8V</text>
+
+                            <!-- R3 Right Top (2 Ohm) -->
+                            <rect x="280" y="20" width="40" height="20" fill="white" stroke="#334155" stroke-width="2"/>
+                            <text x="290" y="35" class="svg-text">2Ω</text>
+
+                            <!-- Currents -->
+                            <line x1="50" y1="50" x2="50" y2="40" class="svg-arrow"/> <text x="60" y="55" class="svg-text">I1</text>
+                            <line x1="200" y1="50" x2="200" y2="65" class="svg-arrow"/> <text x="210" y="60" class="svg-text">I2</text>
+                            <line x1="350" y1="50" x2="350" y2="40" class="svg-arrow"/> <text x="320" y="55" class="svg-text">I3</text>
+                        </svg>
+                    </div>
+
+                    <button onclick="toggleSolution('sol5', this)" class="text-green-700 font-medium hover:text-green-900 border border-green-700 px-4 py-2 rounded transition-colors">Veure Solució</button>
+                    
+                    <div id="sol5" class="solution-box">
+                        <div class="mt-2 text-sm space-y-2">
+                             <p><strong class="font-medium text-slate-600">Plantejament d'Equacions:</strong></p>
+                             <p>1. Node: $I_1 + I_3 = I_2$</p>
+                             <p>2. Malla Esq: $8 - 1I_1 - 2I_2 = 0 \Rightarrow 8 - I_1 - 2I_2 = 0$</p>
+                             <p>3. Malla Dreta: $8 - 2I_3 - 2I_2 = 0 \Rightarrow 4 - I_3 - I_2 = 0$</p>
+                             
+                             <p><strong class="font-medium text-slate-600">Resolució:</strong></p>
+                             <p>De Malla Esq: $I_1 = 8 - 2I_2$</p>
+                             <p>De Malla Dreta: $I_3 = 4 - I_2$</p>
+                             <p>Substituim al Node: $I_2 = (8 - 2I_2) + (4 - I_2) \Rightarrow I_2 = 12 - 3I_2 \Rightarrow 4I_2 = 12$</p>
+                             
+                             <p class="mt-2 p-2 bg-green-100 text-green-800 rounded-md font-semibold">Resultats: $I_2 = 3A$, $I_1 = 2A$, $I_3 = 1A$</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer class="text-center mt-16 py-4 border-t border-slate-200 text-sm text-slate-500 space-y-2">
+            <p>&copy; 2025 Vicent Cardona. Departament de Tecnologia. IES Quartó de Portmany</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ]
+            });
+        });
+
+        function toggleSolution(id, btn) {
+            const box = document.getElementById(id);
+            if (box.style.display === "block") {
+                box.style.display = "none";
+                btn.textContent = "Veure Solució";
+            } else {
+                box.style.display = "block";
+                btn.textContent = "Amagar Solució";
+            }
+        }
+    </script>
+</body>
+</html>
