@@ -392,9 +392,9 @@
                 <!-- PROBLEMA 6 -->
                 <div class="mb-10">
                     <p class="font-semibold text-slate-700 text-lg">6. Dues Malles amb Font Central Invertida</p>
-                    <p class="mt-2 text-slate-600">Calcula els corrents considerant que la font central està invertida (el pol negatiu està a dalt).</p>
-                    
-                    <div class="circuit-diagram">
+                    <p class="mt-2 text-slate-600">Calcula els corrents considerant que la font central està col·locada de manera que el pol positiu està a dalt.</p>
+                    <ul class="list-disc list-inside text-sm text-slate-500 mb-4">
+                        <li>Esq: 42V, 3Ω</li>
                         <svg width="400" height="180" viewBox="0 0 400 180">
                             <!-- Outer Frame -->
                             <rect x="50" y="30" width="300" height="120" class="svg-wire"/>
@@ -469,8 +469,8 @@
 
                             <!-- E2 (Right, DOWN) -->
                             <rect x="240" y="70" width="20" height="20" fill="white" stroke="none"/>
-                            <line x1="245" y1="75" x2="255" y2="75" stroke="black" stroke-width="2"/> <!-- Top Short -->
-                            <line x1="240" y1="85" x2="260" y2="85" stroke="black" stroke-width="2"/> <!-- Bot Long -->
+                            <line x1="240" y1="75" x2="260" y2="75" stroke="black" stroke-width="2"/> <!-- Top Long (+) -->
+                            <line x1="245" y1="85" x2="255" y2="85" stroke="black" stroke-width="2"/> <!-- Bot Short (-) -->
                             <text x="265" y="85" class="svg-label">10V</text>
 
                             <!-- R2 (Right) -->
